@@ -111,6 +111,25 @@ export function pwAbsorbRewardsMessage(walletId, fee) {
   });
 }
 
+export function createFeeRateTransactionsMessage(walletId, additions, feeRate) {
+  const request = {
+    wallet_id: walletId,
+    additions,
+  };
+
+  if (feeRate) {
+    request.fee_rate = feeRate;
+  }
+
+  return format_message('create_fee_rate_transactions', request);
+}
+
+export function sendFeeRateTransactionMessage(txId) {
+  return format_message('send_fee_rate_transaction', {
+    tx_id: txId,
+  });
+}
+
 export function pwJoinPoolMessage(
   walletId,
   poolUrl,

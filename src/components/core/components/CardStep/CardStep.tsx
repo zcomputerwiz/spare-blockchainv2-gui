@@ -25,16 +25,18 @@ type Props = {
   title: ReactNode;
   step: ReactNode;
   action?: ReactNode;
+  tooltip?: ReactNode;
 };
 
 export default function CardStep(props: Props) {
-  const { children, step, title, action } = props;
+  const { children, step, title, tooltip, action } = props;
 
   return (
     <Card>
       <CardHeader
         avatar={<StyledStep aria-label="step">{step}</StyledStep>}
         title={<Typography variant="h6">{title}</Typography>}
+        tooltip={tooltip}
         action={action}
       />
       <Divider />

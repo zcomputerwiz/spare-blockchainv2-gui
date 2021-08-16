@@ -42,10 +42,11 @@ function NumberFormatCustom(props: NumberFormatCustomProps) {
 export type AmountProps = TextFieldProps & {
   children?: (props: { mojo: number; value: string | undefined }) => ReactNode;
   name?: string;
+  endAdornment?: ReactNode;
 };
 
 export default function Amount(props: AmountProps) {
-  const { children, name, variant, fullWidth, ...rest } = props;
+  const { children, name, variant, fullWidth, endAdornment, ...rest } = props;
   const { control } = useFormContext();
   const currencyCode = useCurrencyCode();
 
@@ -66,7 +67,10 @@ export default function Amount(props: AmountProps) {
           spellCheck: false,
           inputComponent: NumberFormatCustom as any,
           endAdornment: (
-            <InputAdornment position="end">{currencyCode}</InputAdornment>
+            <Flex alignItems="center" gap={1}>
+              <InputAdornment position="end">{currencyCode}</InputAdornment>
+              {endAdornment}
+            </Flex>
           ),
         }}
         {...rest}
@@ -96,4 +100,5 @@ Amount.defaultProps = {
   label: <Trans>Amount</Trans>,
   name: 'amount',
   children: undefined,
+  endAdornment: undefined,
 };

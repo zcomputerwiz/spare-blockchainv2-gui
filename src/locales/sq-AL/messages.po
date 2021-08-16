@@ -111,22 +111,22 @@ msgstr "Shtoni {currencyCode} nga Rubineti"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:602
 msgid "Address"
 msgstr "Adresa"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:509
 msgid "Address / Puzzle hash"
 msgstr "Adresa / Kodimi numerik"
 
-#: src/components/core/components/Amount/Amount.tsx:96
+#: src/components/core/components/Amount/Amount.tsx:100
 #: src/components/trading/CreateOffer.jsx:196
 #: src/components/trading/TradesTable.tsx:20
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:519
 msgid "Amount"
 msgstr "Sasia"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Je i sigurt që do ta fshish këtë Plot? Pasi nuk mund ta riktheni."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:638
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Je i sigurt që dëshiron të fshish transaksione të pakonfirmuara?"
 
@@ -317,7 +317,7 @@ msgstr "Chia"
 msgid "Chia Blockchain Wiki"
 msgstr "Zinxhiri Chia Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:653
 msgid "Chia Wallet"
 msgstr "Kuleta Chia"
 
@@ -383,7 +383,7 @@ msgid "Confirm Disconnect"
 msgstr "Konfirmo shkëputjen"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:634
 msgid "Confirmation"
 msgstr "Konfirmimi"
 
@@ -493,7 +493,7 @@ msgstr "Krijo oferte burse"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Create Transaction"
 msgstr "Të krijohet transaksion"
 
@@ -567,6 +567,10 @@ msgstr "Bilanci aktual i pikëve"
 msgid "Current trade status"
 msgstr "Statusi aktual i burses"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:267
+msgid "Custom Fee"
+msgstr ""
+
 #: src/components/selectKey/SelectKey.tsx:185
 msgid "DANGER: permanently delete private key"
 msgstr "KUJDES: Fshije përgjithmonë çelësin privat"
@@ -596,7 +600,7 @@ msgstr "Vonesa"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:635
 msgid "Delete"
 msgstr "Fshij"
 
@@ -606,7 +610,7 @@ msgid "Delete Plot"
 msgstr "Fshij plotin"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:669
 msgid "Delete Unconfirmed Transactions"
 msgstr "Fshi transaksionet e pakonfirmuara"
 
@@ -710,7 +714,7 @@ msgstr "Shkruaj 24 fjalët mnemonic që ke ruajtur pëer të rikthyer Kuletën t
 msgid "Error"
 msgstr "Gabim"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:462
 msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
 msgstr "Gabim: Nuk mund te dergojmë Chia në Adresën e dhënë. Ju lutemi vendosni një adresë Chia."
 
@@ -746,7 +750,7 @@ msgstr "Nuk u arrit të përpunohesh (Plote të pasakta)"
 
 #: src/components/dashboard/DashboardSideBar.tsx:55
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:538
 msgid "Farm"
 msgstr "Ferma"
 
@@ -807,6 +811,10 @@ msgstr "Farming"
 msgid "Farming Status"
 msgstr "Statusi i Farming"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:230
+msgid "Fast ~ 30 minutes"
+msgstr ""
+
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
@@ -817,7 +825,6 @@ msgstr "Statusi i Farming"
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
 msgid "Fee"
 msgstr "Tarifa"
 
@@ -898,7 +905,7 @@ msgstr "Gjenero një ngjyrë tjetër"
 msgid "Grid view"
 msgstr "Pamje si tabelë"
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:589
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "Çelësat HD ose celsat Hierarchical Deterministic janë një lloj skeme çelësi publik / çelës privat ku një çelës privat mund të ketë një numër gati të pafund të çelësave të ndryshëm publik (dhe për këtë portofoli  mer adresa të shumëta) që të gjithë do të kthehen përsëri dhe do të shpenzohen nga një Celës  privat i vetëm."
 
@@ -1148,6 +1155,10 @@ msgstr "Menaxhoni shpërblimet e fermerit"
 msgid "Manage Your Farming Rewards Target Addresses"
 msgstr "Menaxhoni adresat tuaja të synuara për shpërblimet tuaja të fermerit"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:242
+msgid "Medium ~ 2 hours"
+msgstr ""
+
 #: src/components/fullNode/FullNodeConnections.tsx:68
 msgid "MiB Up/Down"
 msgstr "MiB Lart / Poshtë"
@@ -1168,6 +1179,10 @@ msgstr "Më shumë memorie rrit pak shpejtësinë"
 msgid "My Pubkey"
 msgstr "Pubkey im"
 
+#: src/components/wallet/standard/WalletStandard.tsx:525
+msgid "Network Fee"
+msgstr ""
+
 #: src/components/fullNode/card/FullNodeCardNetworkName.tsx:19
 msgid "Network Name"
 msgstr "Emër Rrjeti"
@@ -1181,7 +1196,7 @@ msgstr "Emër Rrjeti"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:585
 msgid "New Address"
 msgstr "Adresë e re"
 
@@ -1298,7 +1313,7 @@ msgstr "Ofertë"
 msgid "Offers Created"
 msgstr "Oferta e krijuar"
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:491
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Mesatarisht ka një minutë midis çdo transaksion blloku. Nëse nuk ka bllokim, ju mund të prisni që transaksioni juaj të përfshihet në më pak se një minutë."
 
@@ -1361,7 +1376,7 @@ msgstr "Ju lutemi shkruani një shumë fillestare të vlefshme"
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:438
 msgid "Please enter a valid numeric amount"
 msgstr "Ju lutemi shkruani një numer të vlefshem"
 
@@ -1369,7 +1384,7 @@ msgstr "Ju lutemi shkruani një numer të vlefshem"
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:450
 msgid "Please enter a valid numeric fee"
 msgstr "Ju lutemi vendosni një tarifë të vlefshme numerike"
 
@@ -1386,7 +1401,7 @@ msgid "Please enter a valid pubkey"
 msgstr "Ju lutemi shkruani një pubkey të vlefshëm"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:426
 msgid "Please finish syncing before making a transaction"
 msgstr "Ju lutemi mbaroni sinkronizimin përpara se të bëni një transaksion"
 
@@ -1708,7 +1723,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "Vlerësoni Konfigurimin e Kuletë të Përdoruesit të Kufizuar"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:582
 msgid "Receive Address"
 msgstr "Adresë për Marrje"
 
@@ -1851,7 +1866,7 @@ msgstr "Shes"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:548
 msgid "Send"
 msgstr "Dërgo"
 
@@ -1891,6 +1906,10 @@ msgstr "Identifikohu"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:195
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "Kalon duke shtuar një direktori përfundimtare"
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:254
+msgid "Slow ~ 4 hours"
+msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
 msgid "Smooth out your XCH farming rewards by joining a pool."
@@ -2377,7 +2396,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr "Në pritje të konfirmimit të transaksionit"
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:680
 msgid "Wallet Status:"
 msgstr "Statusi i Portofolit:"
 
@@ -2618,6 +2637,6 @@ msgstr "{currencyCode} Totali i Chia"
 msgid "{currencyCode} User Transaction Fees"
 msgstr "{currencyCode} Tarifat e Transaksionit të Përdoruesit"
 
-#: src/components/core/components/Amount/Amount.tsx:80
+#: src/components/core/components/Amount/Amount.tsx:84
 msgid "{mojo, plural, one {mojo} other {mojos}}"
 msgstr "{mojo, plural, one {mojo} other {mojos}}"

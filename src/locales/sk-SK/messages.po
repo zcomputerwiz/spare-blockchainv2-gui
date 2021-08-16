@@ -111,22 +111,22 @@ msgstr "Pridať {currencyCode} z Faucetu"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:602
 msgid "Address"
 msgstr "Adresa"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:509
 msgid "Address / Puzzle hash"
 msgstr "Adresa"
 
-#: src/components/core/components/Amount/Amount.tsx:96
+#: src/components/core/components/Amount/Amount.tsx:100
 #: src/components/trading/CreateOffer.jsx:196
 #: src/components/trading/TradesTable.tsx:20
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:519
 msgid "Amount"
 msgstr "Suma"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Naozaj chcete odstrániť pole? Pole nie je možné obnoviť."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:638
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Naozaj chcete odstrániť nepotvrdené transakcie?"
 
@@ -317,7 +317,7 @@ msgstr "Chia"
 msgid "Chia Blockchain Wiki"
 msgstr "Chia Blockchain Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:653
 msgid "Chia Wallet"
 msgstr "Chia peňaženka"
 
@@ -383,7 +383,7 @@ msgid "Confirm Disconnect"
 msgstr "Potvrďte odpojenie"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:634
 msgid "Confirmation"
 msgstr "Potvrdenie"
 
@@ -493,7 +493,7 @@ msgstr "Vytvorte obchodnú ponuku"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Create Transaction"
 msgstr "Vytvoriť transakciu"
 
@@ -567,6 +567,10 @@ msgstr "Aktuálny počet bodov"
 msgid "Current trade status"
 msgstr "Aktuálny stav obchodu"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:267
+msgid "Custom Fee"
+msgstr ""
+
 #: src/components/selectKey/SelectKey.tsx:185
 msgid "DANGER: permanently delete private key"
 msgstr "POZOR: natrvalo odstrániť súkromný klúč"
@@ -596,7 +600,7 @@ msgstr "Oneskorenie"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:635
 msgid "Delete"
 msgstr "Zmazať"
 
@@ -606,7 +610,7 @@ msgid "Delete Plot"
 msgstr "Zmazať pole"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:669
 msgid "Delete Unconfirmed Transactions"
 msgstr "Odstrániť nepotvrdené transakcie"
 
@@ -710,7 +714,7 @@ msgstr "Zadajte 24 slov, ktoré ste si uložili pre účely obnovenia vašej pe�
 msgid "Error"
 msgstr "Chyba"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:462
 msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
 msgstr "Chyba: Chia nie je možné odoslať na farebnú adresu. Zadajte prosím Chia adresu."
 
@@ -746,7 +750,7 @@ msgstr "Nepodarilo sa otvoriť (neplatné polia)"
 
 #: src/components/dashboard/DashboardSideBar.tsx:55
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:538
 msgid "Farm"
 msgstr "Farma"
 
@@ -807,6 +811,10 @@ msgstr "Ťažba"
 msgid "Farming Status"
 msgstr "Stav ťažby"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:230
+msgid "Fast ~ 30 minutes"
+msgstr ""
+
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
@@ -817,7 +825,6 @@ msgstr "Stav ťažby"
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
 msgid "Fee"
 msgstr "Poplatok"
 
@@ -898,7 +905,7 @@ msgstr "Generovať novú farbu"
 msgid "Grid view"
 msgstr "Mriežkové zobrazenie"
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:589
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD alebo Hierarchické Deterministické kľúče sú typ schémy verejného kľúča/súkromného kľúča, kde jeden súkromný kľúč môže mať takmer nekonečný počet rôznych verejných kľúčov (a tým pádom adries pre príjem do peňaženky), ktoré sa nakoniec vrátia k jedinému súkromnému kľúču a budú z neho utratiteľné."
 
@@ -1148,6 +1155,10 @@ msgstr "Spravovať farmárske odmeny"
 msgid "Manage Your Farming Rewards Target Addresses"
 msgstr "Spravovať cieľové adresy farmárskych odmien"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:242
+msgid "Medium ~ 2 hours"
+msgstr ""
+
 #: src/components/fullNode/FullNodeConnections.tsx:68
 msgid "MiB Up/Down"
 msgstr "MiB Odoslané/Stiahnuté"
@@ -1168,6 +1179,10 @@ msgstr "Viac pamäte mierne zvyšuje rýchlosť"
 msgid "My Pubkey"
 msgstr "Môj verejný kľúč"
 
+#: src/components/wallet/standard/WalletStandard.tsx:525
+msgid "Network Fee"
+msgstr ""
+
 #: src/components/fullNode/card/FullNodeCardNetworkName.tsx:19
 msgid "Network Name"
 msgstr "Názov siete"
@@ -1181,7 +1196,7 @@ msgstr "Názov siete"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:585
 msgid "New Address"
 msgstr "Nová adresa"
 
@@ -1298,7 +1313,7 @@ msgstr "Ponuka"
 msgid "Offers Created"
 msgstr "Vytvorené ponuky"
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:491
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Priemerný čas medzi jednotlivými blokmi transakcií je jedna minúta. Ak nedôjde k preťaženiu, môžete očakávať, že vaša transakcia bude zahrnutá za menej ako minútu."
 
@@ -1361,7 +1376,7 @@ msgstr "Prosím zadajte platnú počiatočnú sumu"
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:438
 msgid "Please enter a valid numeric amount"
 msgstr "Prosím zadajte platnú číselnú sumu"
 
@@ -1369,7 +1384,7 @@ msgstr "Prosím zadajte platnú číselnú sumu"
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:450
 msgid "Please enter a valid numeric fee"
 msgstr "Prosím zadajte platný číselný poplatok"
 
@@ -1386,7 +1401,7 @@ msgid "Please enter a valid pubkey"
 msgstr "Prosím zadajte platný verejný kľúč"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:426
 msgid "Please finish syncing before making a transaction"
 msgstr "Pred uskutočnením transakcie dokončite synchronizáciu"
 
@@ -1708,7 +1723,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "Nastavenia používateľskej peňaženky s obmedzenou sadzbou"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:582
 msgid "Receive Address"
 msgstr "Adresa príjemcu"
 
@@ -1851,7 +1866,7 @@ msgstr "Predať"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:548
 msgid "Send"
 msgstr "Odoslať"
 
@@ -1891,6 +1906,10 @@ msgstr "Prihlásiť sa"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:195
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "Preskočiť pridanie cieľového adresára do zberača pre farmárčenie"
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:254
+msgid "Slow ~ 4 hours"
+msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
 msgid "Smooth out your XCH farming rewards by joining a pool."
@@ -2377,7 +2396,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr "Čaká sa na potvrdenie transakcie"
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:680
 msgid "Wallet Status:"
 msgstr "Stav peňaženky:"
 
@@ -2618,6 +2637,6 @@ msgstr "{currencyCode} Celkové množstvo vyfarmárčenej Chii"
 msgid "{currencyCode} User Transaction Fees"
 msgstr "{currencyCode} Užívateľské poplatky za transakcie"
 
-#: src/components/core/components/Amount/Amount.tsx:80
+#: src/components/core/components/Amount/Amount.tsx:84
 msgid "{mojo, plural, one {mojo} other {mojos}}"
 msgstr "{mojo, plural, one {mojo} few {mojos} many {mojos} other {mojos}}"

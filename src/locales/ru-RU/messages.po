@@ -111,22 +111,22 @@ msgstr "Добавить {currencyCode} из крана"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:602
 msgid "Address"
 msgstr "Адрес"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:509
 msgid "Address / Puzzle hash"
 msgstr "Адрес / Хэш-головоломка"
 
-#: src/components/core/components/Amount/Amount.tsx:96
+#: src/components/core/components/Amount/Amount.tsx:100
 #: src/components/trading/CreateOffer.jsx:196
 #: src/components/trading/TradesTable.tsx:20
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:519
 msgid "Amount"
 msgstr "Количество"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Вы уверены, что хотите удалить участок? Участок не подлежит восстановлению."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:638
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Вы действительно хотите удалить неподтвержденные транзакции?"
 
@@ -489,7 +489,7 @@ msgstr ""
 "\n"
 "Приведенная выше команда создает одио поле (указывается -n 1), для параллельного построения вам нужно повторить команду (не закрывая первую). Увеличьте значение -n для последовательного построения, то есть после завершения первого участка запускается следующий."
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:653
 msgid "Chia Wallet"
 msgstr "Кошелек Chia"
 
@@ -555,7 +555,7 @@ msgid "Confirm Disconnect"
 msgstr "Подтвердить отключение"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:634
 msgid "Confirmation"
 msgstr "Подтверждение"
 
@@ -665,7 +665,7 @@ msgstr "Создать торговое предложение"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Create Transaction"
 msgstr "Создать транзакцию"
 
@@ -739,6 +739,10 @@ msgstr "Текущий баланс пунктов"
 msgid "Current trade status"
 msgstr "Текущий торговый статус"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:267
+msgid "Custom Fee"
+msgstr ""
+
 #: src/components/selectKey/SelectKey.tsx:185
 msgid "DANGER: permanently delete private key"
 msgstr "ОПАСНО: удалить закрытый ключ навсегда"
@@ -768,7 +772,7 @@ msgstr "Задержка"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:635
 msgid "Delete"
 msgstr "Удалить"
 
@@ -778,7 +782,7 @@ msgid "Delete Plot"
 msgstr "Удалить участок"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:669
 msgid "Delete Unconfirmed Transactions"
 msgstr "Удалить неподтвержденные транзакции"
 
@@ -882,7 +886,7 @@ msgstr "Введите мнемонику из 24 слов, которую вы 
 msgid "Error"
 msgstr "Ошибка"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:462
 msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
 msgstr "Ошибка: не удается отправить чиа на цветной адрес. Пожалуйста, введите адрес chia."
 
@@ -918,7 +922,7 @@ msgstr "Неудается открыть (некоррекные участки
 
 #: src/components/dashboard/DashboardSideBar.tsx:55
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:538
 msgid "Farm"
 msgstr "Ферма"
 
@@ -979,6 +983,10 @@ msgstr "Фарминг"
 msgid "Farming Status"
 msgstr "Статус фарминга"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:230
+msgid "Fast ~ 30 minutes"
+msgstr ""
+
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
@@ -989,7 +997,6 @@ msgstr "Статус фарминга"
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
 msgid "Fee"
 msgstr "Комиссия"
 
@@ -1070,7 +1077,7 @@ msgstr "Сгенерировать новый цвет"
 msgid "Grid view"
 msgstr "Вид \"сетка\""
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:589
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD или иерархические детерминированные ключи (Hierarchical Deterministic keys) - это схема открытого/закрытого ключей, в которой один закрытый ключ может иметь почти бесконечное количество различных открытых ключей (и, следовательно, адресов для получения кошелька), которые в конечном итоге будут возвращаться и использоваться одним закрытым ключом."
 
@@ -1320,6 +1327,10 @@ msgstr "Управление вознаграждением за фарминг"
 msgid "Manage Your Farming Rewards Target Addresses"
 msgstr "Управление целевыми адресами для получения вознаграждений за фарминг"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:242
+msgid "Medium ~ 2 hours"
+msgstr ""
+
 #: src/components/fullNode/FullNodeConnections.tsx:68
 msgid "MiB Up/Down"
 msgstr "МиБ Исх./Вх."
@@ -1340,6 +1351,10 @@ msgstr "Больше количество памяти немного увели
 msgid "My Pubkey"
 msgstr "Мой публичный ключ"
 
+#: src/components/wallet/standard/WalletStandard.tsx:525
+msgid "Network Fee"
+msgstr ""
+
 #: src/components/fullNode/card/FullNodeCardNetworkName.tsx:19
 msgid "Network Name"
 msgstr "Имя сети"
@@ -1353,7 +1368,7 @@ msgstr "Имя сети"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:585
 msgid "New Address"
 msgstr "Новый адрес"
 
@@ -1470,7 +1485,7 @@ msgstr "Предложение"
 msgid "Offers Created"
 msgstr "Предложение создано"
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:491
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "В среднем между каждым блоком транзакций проходит одна минута. Если нет перегрузки, вы можете ожидать что ваша транзакция будет включена менее чем за минуту."
 
@@ -1533,7 +1548,7 @@ msgstr "Пожалуйста, укажите корректное численн
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:438
 msgid "Please enter a valid numeric amount"
 msgstr "Пожалуйста, укажите корректное численное значение"
 
@@ -1541,7 +1556,7 @@ msgstr "Пожалуйста, укажите корректное численн
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:450
 msgid "Please enter a valid numeric fee"
 msgstr "Пожалуйста, укажите корректное численное значение комиссии"
 
@@ -1558,7 +1573,7 @@ msgid "Please enter a valid pubkey"
 msgstr "Пожалуйста, введите действующий публичный ключ"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:426
 msgid "Please finish syncing before making a transaction"
 msgstr "Пожалуйста, завершите синхронизацию перед совершением транзакции"
 
@@ -1880,7 +1895,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "Настройка кошелька пользователя с ограничением скорости"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:582
 msgid "Receive Address"
 msgstr "Адрес для получения платежа"
 
@@ -2023,7 +2038,7 @@ msgstr "Продажа"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:548
 msgid "Send"
 msgstr "Отправить"
 
@@ -2063,6 +2078,10 @@ msgstr "Войти в систему"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:195
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "Пропускает добавление окончательной директории в комбайн для фермерства"
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:254
+msgid "Slow ~ 4 hours"
+msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
 msgid "Smooth out your XCH farming rewards by joining a pool."
@@ -2549,7 +2568,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:680
 msgid "Wallet Status:"
 msgstr ""
 
@@ -2790,6 +2809,6 @@ msgstr "{currencyCode} Всего Чиа выращено"
 msgid "{currencyCode} User Transaction Fees"
 msgstr "{currencyCode} Комиссия за транзакции пользователей"
 
-#: src/components/core/components/Amount/Amount.tsx:80
+#: src/components/core/components/Amount/Amount.tsx:84
 msgid "{mojo, plural, one {mojo} other {mojos}}"
 msgstr ""

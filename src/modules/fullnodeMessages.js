@@ -115,6 +115,26 @@ export const getBlockChainState = () => {
   return action;
 };
 
+function getFeeEstimatesMessage() {
+  const action = fullNodeMessage();
+  action.message.command = 'get_fee_estimates';
+  action.message.data = {};
+  return action;
+};
+
+export async function getFeeEstimates() {
+  return async (dispatch) => {
+    const { data } = await async_api(
+      dispatch,
+      getFeeEstimatesMessage(),
+      true,
+      true,
+    );
+
+    return data;
+  };
+};
+
 /*
 // @deprecated
 export const getLatestBlocks = () => {

@@ -287,7 +287,7 @@ export const DIDListItems = () => {
   );
 };
 
-export function CreateWalletView() {
+export default function CreateWalletView() {
   const view = useSelector((state) => state.create_options.view);
 
   return (

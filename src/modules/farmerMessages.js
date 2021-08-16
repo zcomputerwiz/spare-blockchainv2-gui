@@ -126,6 +126,7 @@ export const setPayoutInstructions = (
 
 export function getHarvesters() {
   return async (dispatch) => {
+    return {};
     const { data } = await async_api(
       dispatch,
       farmerMessage({

@@ -51,50 +51,48 @@ export default function PlotHeader(props: Props) {
 
   return (
     <div>
-      <Flex alignItems="center">
+      <Flex alignItems="center" gap={1}>
         <Flex flexGrow={1}>{children}</Flex>
-        <div>
-          <Button
-            color="primary"
-            variant="outlined"
-            onClick={handleAddPlot}
-            startIcon={<AddIcon />}
-          >
-            <Trans>Add a Plot</Trans>
-          </Button>{' '}
-          <More>
-            {({ onClose }) => (
-              <Box>
-                <MenuItem
-                  onClick={() => {
-                    onClose();
-                    handleRefreshPlots();
-                  }}
-                >
-                  <ListItemIcon>
-                    <RefreshIcon fontSize="small" />
-                  </ListItemIcon>
-                  <Typography variant="inherit" noWrap>
-                    <Trans>Refresh Plots</Trans>
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    onClose();
-                    handleAddPlotDirectory();
-                  }}
-                >
-                  <ListItemIcon>
-                    <FolderIcon fontSize="small" />
-                  </ListItemIcon>
-                  <Typography variant="inherit" noWrap>
-                    <Trans>Add Plot Directory</Trans>
-                  </Typography>
-                </MenuItem>
-              </Box>
-            )}
-          </More>
-        </div>
+        <Button
+          color="primary"
+          variant="outlined"
+          onClick={handleAddPlot}
+          startIcon={<AddIcon />}
+        >
+          <Trans>Add a Plot</Trans>
+        </Button>
+        <More>
+          {({ onClose }) => (
+            <Box>
+              <MenuItem
+                onClick={() => {
+                  onClose();
+                  handleRefreshPlots();
+                }}
+              >
+                <ListItemIcon>
+                  <RefreshIcon fontSize="small" />
+                </ListItemIcon>
+                <Typography variant="inherit" noWrap>
+                  <Trans>Refresh Plots</Trans>
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  onClose();
+                  handleAddPlotDirectory();
+                }}
+              >
+                <ListItemIcon>
+                  <FolderIcon fontSize="small" />
+                </ListItemIcon>
+                <Typography variant="inherit" noWrap>
+                  <Trans>Add Plot Directory</Trans>
+                </Typography>
+              </MenuItem>
+            </Box>
+          )}
+        </More>
       </Flex>
     </div>
   );

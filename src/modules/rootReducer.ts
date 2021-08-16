@@ -4,7 +4,6 @@ import { connectRouter } from 'connected-react-router';
 import websocketReducer from './websocket';
 import incomingReducer from './incoming';
 import mnemonicReducer from './mnemonic';
-import walletMenuReducer from './walletMenu';
 import createWallet from './createWallet';
 import tradeReducer from './trade';
 import dialogReducer from './dialog';
@@ -24,7 +23,6 @@ const reducers = {
   websocket: websocketReducer,
   wallet_state: incomingReducer,
   mnemonic_state: mnemonicReducer,
-  wallet_menu: walletMenuReducer,
   create_options: createWallet,
   trade_state: tradeReducer,
   dialog_state: dialogReducer,

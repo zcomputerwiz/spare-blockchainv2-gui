@@ -111,22 +111,22 @@ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:602
 msgid "Address"
 msgstr "Адрес"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:509
 msgid "Address / Puzzle hash"
 msgstr "Адрес / Пъзел Хеш"
 
-#: src/components/core/components/Amount/Amount.tsx:96
+#: src/components/core/components/Amount/Amount.tsx:100
 #: src/components/trading/CreateOffer.jsx:196
 #: src/components/trading/TradesTable.tsx:20
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:519
 msgid "Amount"
 msgstr "Количество"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Сигурни ли сте, че желаете да изтриете този Плот?"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:638
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr ""
 
@@ -317,7 +317,7 @@ msgstr "Чиа"
 msgid "Chia Blockchain Wiki"
 msgstr "Чиа блокчейн Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:653
 msgid "Chia Wallet"
 msgstr "Chia Портфейл"
 
@@ -383,7 +383,7 @@ msgid "Confirm Disconnect"
 msgstr "Потвърди прекратяването на връзката"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:634
 msgid "Confirmation"
 msgstr ""
 
@@ -493,7 +493,7 @@ msgstr "Създай предложение за търговия"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Create Transaction"
 msgstr "Създай транзакция"
 
@@ -567,6 +567,10 @@ msgstr ""
 msgid "Current trade status"
 msgstr "Статус на търга"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:267
+msgid "Custom Fee"
+msgstr ""
+
 #: src/components/selectKey/SelectKey.tsx:185
 msgid "DANGER: permanently delete private key"
 msgstr "ОПАСНОСТ: Необратимо изтриване на личен ключ"
@@ -596,7 +600,7 @@ msgstr "Закъснение"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:635
 msgid "Delete"
 msgstr "Изтриване"
 
@@ -606,7 +610,7 @@ msgid "Delete Plot"
 msgstr "Изтрий поле"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:669
 msgid "Delete Unconfirmed Transactions"
 msgstr ""
 
@@ -710,7 +714,7 @@ msgstr "Въведи 24 думения ключ който сте запазил
 msgid "Error"
 msgstr "Грешка"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:462
 msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
 msgstr "Грешка: Неуспешно изпращане на Chia до избрания адрес. Моля въведете Chia адрес."
 
@@ -746,7 +750,7 @@ msgstr "Неуспешно отваряне(невалидни полета)"
 
 #: src/components/dashboard/DashboardSideBar.tsx:55
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:538
 msgid "Farm"
 msgstr "Ферма"
 
@@ -807,6 +811,10 @@ msgstr "Фармене"
 msgid "Farming Status"
 msgstr "Статус на фарменето"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:230
+msgid "Fast ~ 30 minutes"
+msgstr ""
+
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
@@ -817,7 +825,6 @@ msgstr "Статус на фарменето"
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
 msgid "Fee"
 msgstr "Такса"
 
@@ -898,7 +905,7 @@ msgstr "Генериране на нов цвят"
 msgid "Grid view"
 msgstr ""
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:589
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "Иерархично Определящи ключове са тип схема от публични/частни ключове, където един частен ключ може да има почти безкраен брой публични ключовен (съответно и безкраен брой адреси за получаване), които всички така или иначе ще водят обратно към един единствен частен ключ, който ще може и да ги разпределя или похарчи."
 
@@ -1148,6 +1155,10 @@ msgstr "Управлявай наградите за фармене"
 msgid "Manage Your Farming Rewards Target Addresses"
 msgstr "Управление на адрес за получаване на възнаграждения"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:242
+msgid "Medium ~ 2 hours"
+msgstr ""
+
 #: src/components/fullNode/FullNodeConnections.tsx:68
 msgid "MiB Up/Down"
 msgstr "MiB Up/Down"
@@ -1168,6 +1179,10 @@ msgstr "Повече памет малко увеличава скоростта
 msgid "My Pubkey"
 msgstr "Моят публичен ключ"
 
+#: src/components/wallet/standard/WalletStandard.tsx:525
+msgid "Network Fee"
+msgstr ""
+
 #: src/components/fullNode/card/FullNodeCardNetworkName.tsx:19
 msgid "Network Name"
 msgstr "Име на мрежа"
@@ -1181,7 +1196,7 @@ msgstr "Име на мрежа"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:585
 msgid "New Address"
 msgstr "Нов адрес"
 
@@ -1298,7 +1313,7 @@ msgstr "Предложи"
 msgid "Offers Created"
 msgstr "Създадени оферти"
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:491
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Обикновенно има една минута между всеки блок с транзакции. Те могат да се осъществяват за по- малко от минута, в случай че няма натоварване."
 
@@ -1361,7 +1376,7 @@ msgstr "Моля, въведете валидна първоначална су�
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:438
 msgid "Please enter a valid numeric amount"
 msgstr ""
 "35 / 5000\n"
@@ -1371,7 +1386,7 @@ msgstr ""
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:450
 msgid "Please enter a valid numeric fee"
 msgstr "Моля, въведете валидна числова такса"
 
@@ -1388,7 +1403,7 @@ msgid "Please enter a valid pubkey"
 msgstr "Моля въведете валиден публичен ключ"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:426
 msgid "Please finish syncing before making a transaction"
 msgstr "Моля завършете синхронизирането преди правене на транзакции"
 
@@ -1710,7 +1725,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:582
 msgid "Receive Address"
 msgstr "Адрес за получаване"
 
@@ -1853,7 +1868,7 @@ msgstr "Продай"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:548
 msgid "Send"
 msgstr "Изпрати"
 
@@ -1893,6 +1908,10 @@ msgstr "Вход"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:195
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "Пропуска добавянето на финална директория на Фармера за фармене"
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:254
+msgid "Slow ~ 4 hours"
+msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
 msgid "Smooth out your XCH farming rewards by joining a pool."
@@ -2379,7 +2398,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:680
 msgid "Wallet Status:"
 msgstr ""
 
@@ -2620,6 +2639,6 @@ msgstr "{currencyCode} Общо изкопани Chia"
 msgid "{currencyCode} User Transaction Fees"
 msgstr "{currencyCode} Такси на потребителя за транзакции"
 
-#: src/components/core/components/Amount/Amount.tsx:80
+#: src/components/core/components/Amount/Amount.tsx:84
 msgid "{mojo, plural, one {mojo} other {mojos}}"
 msgstr ""

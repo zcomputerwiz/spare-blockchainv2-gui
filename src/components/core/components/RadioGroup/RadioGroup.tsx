@@ -73,13 +73,14 @@ export default function RadioGroup(props: Props) {
   const { name, boolean, ...rest } = props;
   const { control } = useFormContext();
 
+  const Tag = boolean ? ParseBoolean : MaterialRadioGroup
+
   return (
     // @ts-ignore
     <Controller
-      as={boolean ? ParseBoolean : MaterialRadioGroup}
+      render={({ field }) => <Tag {...field} {...rest} />}
       name={name}
       control={control}
-      {...rest}
     />
   );
 }

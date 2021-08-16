@@ -59,11 +59,9 @@ export default function InputBase(props: Props): JSX.Element {
   return (
     // @ts-ignore
     <Controller
-      as={MaterialInputBase}
+      render={({ field }) => <MaterialInputBase {...field} error={!!errorMessage} {...rest} />}
       name={name}
       control={control}
-      error={!!errorMessage}
-      {...rest}
     />
   );
 }

@@ -16,10 +16,9 @@ export default function Select(props: Props) {
   return (
     // @ts-ignore
     <Controller
-      as={MaterialSelect}
+      render={({ field }) => <MaterialSelect {...field} error={!!errorMessage} />}
       name={name}
       control={control}
-      error={!!errorMessage}
       {...rest}
     />
   );

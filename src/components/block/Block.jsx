@@ -6,6 +6,7 @@ import {
   Table,
   TableBody,
   TableCell,
+  Typography,
   TableContainer,
 } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
@@ -19,6 +20,7 @@ import {
   Loading,
   TooltipIcon,
   Flex,
+  CardKeyValue,
 } from '@chia/core';
 import {
   unix_to_short_date,
@@ -151,13 +153,10 @@ export default function Block() {
   if (!block) {
     return (
       <LayoutMain title={<Trans>Block</Trans>}>
-        <Card
-          title={
-            <BlockTitle>
-              <Trans>Block</Trans>
-            </BlockTitle>
-          }
-        >
+        <BlockTitle>
+          <Trans>Block</Trans>
+        </BlockTitle>
+        <Card>
           <Alert severity="warning">
             <Trans>Block with hash {headerHash} does not exist.</Trans>
           </Alert>
@@ -182,11 +181,11 @@ export default function Block() {
 
   const rows = [
     {
-      name: <Trans>Header hash</Trans>,
+      label: <Trans>Header hash</Trans>,
       value: blockRecord.header_hash,
     },
     {
-      name: <Trans>Timestamp</Trans>,
+      label: <Trans>Timestamp</Trans>,
       value: blockRecord.timestamp
         ? unix_to_short_date(blockRecord.timestamp)
         : null,
@@ -198,11 +197,11 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Height</Trans>,
+      label: <Trans>Height</Trans>,
       value: <FormatLargeNumber value={blockRecord.height} />,
     },
     {
-      name: <Trans>Weight</Trans>,
+      label: <Trans>Weight</Trans>,
       value: <FormatLargeNumber value={blockRecord.weight} />,
       tooltip: (
         <Trans>
@@ -212,17 +211,17 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Previous Header Hash</Trans>,
+      label: <Trans>Previous Header Hash</Trans>,
       value: (
         <Link onClick={handleShowPreviousBlock}>{blockRecord.prev_hash}</Link>
       ),
     },
     {
-      name: <Trans>Difficulty</Trans>,
+      label: <Trans>Difficulty</Trans>,
       value: <FormatLargeNumber value={difficulty} />,
     },
     {
-      name: <Trans>Total VDF Iterations</Trans>,
+      label: <Trans>Total VDF Iterations</Trans>,
       value: <FormatLargeNumber value={blockRecord.total_iters} />,
       tooltip: (
         <Trans>
@@ -232,7 +231,7 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Block VDF Iterations</Trans>,
+      label: <Trans>Block VDF Iterations</Trans>,
       value: (
         <FormatLargeNumber
           value={
@@ -248,7 +247,7 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Proof of Space Size</Trans>,
+      label: <Trans>Proof of Space Size</Trans>,
       value: (
         <FormatLargeNumber
           value={block.reward_chain_block.proof_of_space.size}
@@ -256,15 +255,15 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Plot Public Key</Trans>,
+      label: <Trans>Plot Public Key</Trans>,
       value: block.reward_chain_block.proof_of_space.plot_public_key,
     },
     {
-      name: <Trans>Pool Public Key</Trans>,
+      label: <Trans>Pool Public Key</Trans>,
       value: block.reward_chain_block.proof_of_space.pool_public_key,
     },
     {
-      name: <Trans>Farmer Puzzle Hash</Trans>,
+      label: <Trans>Farmer Puzzle Hash</Trans>,
       value: (
         <Link
           target="_blank"
@@ -280,7 +279,7 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Pool Puzzle Hash</Trans>,
+      label: <Trans>Pool Puzzle Hash</Trans>,
       value: (
         <Link
           target="_blank"
@@ -296,7 +295,7 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Plot Id</Trans>,
+      label: <Trans>Plot Id</Trans>,
       value: newPlotId,
       tooltip: (
         <Trans>
@@ -306,19 +305,19 @@ export default function Block() {
       ),
     },
     {
-      name: <Trans>Transactions Filter Hash</Trans>,
+      label: <Trans>Transactions Filter Hash</Trans>,
       value: block.foliage_transaction_block?.filter_hash,
     },
     {
-      name: <Trans>Pool Reward Amount</Trans>,
+      label: <Trans>Pool Reward Amount</Trans>,
       value: `${poolReward} ${currencyCode}`,
     },
     {
-      name: <Trans>Base Farmer Reward Amount</Trans>,
+      label: <Trans>Base Farmer Reward Amount</Trans>,
       value: `${baseFarmerReward} ${currencyCode}`,
     },
     {
-      name: <Trans>Fees Amount</Trans>,
+      label: <Trans>Fees Amount</Trans>,
       value: chiaFees ? `${chiaFees} ${currencyCode}` : '',
       tooltip: (
         <Trans>
@@ -330,45 +329,28 @@ export default function Block() {
 
   return (
     <LayoutMain title={<Trans>Block</Trans>}>
-      <Card
-        title={
+      <Flex gap={1}>
+        <Flex flexGrow={1}>
           <BlockTitle>
-            <Trans>
-              Block at height {blockRecord.height} in the Chia blockchain
-            </Trans>
+            <Typography variant="h5">
+              <Trans>
+                Block at height {blockRecord.height} in the Chia blockchain
+              </Trans>
+            </Typography>
           </BlockTitle>
-        }
-        action={
-          <Flex gap={1}>
-            <Button
-              onClick={handleShowPreviousBlock}
-              disabled={!hasPreviousBlock}
-            >
-              <Trans>Previous</Trans>
-            </Button>
-            <Button onClick={handleShowNextBlock} disabled={!hasNextBlock}>
-              <Trans>Next</Trans>
-            </Button>
-          </Flex>
-        }
-      >
-        <TableContainer component={Paper}>
-          <Table>
-            <TableBody>
-              {rows.map((row, index) => (
-                <TableRow key={index}>
-                  <TableCell component="th" scope="row">
-                    {row.name}{' '}
-                    {row.tooltip && <TooltipIcon>{row.tooltip}</TooltipIcon>}
-                  </TableCell>
-                  <TableCell onClick={row.onClick} align="right">
-                    {row.value}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        </Flex>
+        <Button
+          onClick={handleShowPreviousBlock}
+          disabled={!hasPreviousBlock}
+        >
+          <Trans>Previous</Trans>
+        </Button>
+        <Button onClick={handleShowNextBlock} disabled={!hasNextBlock}>
+          <Trans>Next</Trans>
+        </Button>
+      </Flex>
+      <Card>
+        <CardKeyValue rows={rows} size="normal" />
       </Card>
     </LayoutMain>
   );

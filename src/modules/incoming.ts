@@ -6,13 +6,42 @@ import {
   get_balance_for_wallet,
   getTransactionMessage,
   deleteUnconfirmedTransactionsMessage,
+  createFeeRateTransactionsMessage,
+  sendFeeRateTransactionMessage,
 } from './message';
 import type WalletBalance from '../types/WalletBalance';
 import type Wallet from '../types/Wallet';
 import type Transaction from '../types/Transaction';
 import type PoolWalletStatus from '../types/PoolWalletStatus';
+import type Addition from '../types/Addition';
 import mergeArrayItem from '../util/mergeArrayItem';
 import mergeArrays from '../util/mergeArrays';
+
+export function createFeeRateTransactions(walletId: number, additions: Addition[], feeRate?: number) {
+  return async (dispatch): Promise<Transaction> => {
+    const { data } = await async_api(
+      dispatch,
+      createFeeRateTransactionsMessage(walletId, additions, feeRate),
+      false,
+      true,
+    );
+
+    return data;
+  };
+}
+
+export function sendFeeRateTransaction(txId: number) {
+  return async (dispatch): Promise<Transaction> => {
+    const { data } = await async_api(
+      dispatch,
+      sendFeeRateTransactionMessage(txId),
+      false,
+      true,
+    );
+
+    return data;
+  };
+}
 
 export function getTransaction(transactionId: string) {
   return async (dispatch): Promise<Transaction> => {

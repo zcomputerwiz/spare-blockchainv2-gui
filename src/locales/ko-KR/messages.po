@@ -111,22 +111,22 @@ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:602
 msgid "Address"
 msgstr "주소"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:509
 msgid "Address / Puzzle hash"
 msgstr "주소 / 퍼즐 해시"
 
-#: src/components/core/components/Amount/Amount.tsx:96
+#: src/components/core/components/Amount/Amount.tsx:100
 #: src/components/trading/CreateOffer.jsx:196
 #: src/components/trading/TradesTable.tsx:20
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:519
 msgid "Amount"
 msgstr "금액"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "정말로 플롯을 삭제하시겠습니까? 삭제된 플롯은 복구되지 않습니다."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:638
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr ""
 
@@ -317,7 +317,7 @@ msgstr "치아"
 msgid "Chia Blockchain Wiki"
 msgstr "치아 블록체인 위키"
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
+#: src/components/wallet/standard/WalletStandard.tsx:653
 msgid "Chia Wallet"
 msgstr "치아 지갑"
 
@@ -383,7 +383,7 @@ msgid "Confirm Disconnect"
 msgstr "연결 해제 확인"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:634
 msgid "Confirmation"
 msgstr ""
 
@@ -493,7 +493,7 @@ msgstr "거래 제안 만들기"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Create Transaction"
 msgstr "거래 생성하기"
 
@@ -567,6 +567,10 @@ msgstr ""
 msgid "Current trade status"
 msgstr "현재 거래 상태"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:267
+msgid "Custom Fee"
+msgstr ""
+
 #: src/components/selectKey/SelectKey.tsx:185
 msgid "DANGER: permanently delete private key"
 msgstr "경고: 영구적으로 개인 키를 삭제합니다."
@@ -596,7 +600,7 @@ msgstr "지연"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:635
 msgid "Delete"
 msgstr "삭제"
 
@@ -606,7 +610,7 @@ msgid "Delete Plot"
 msgstr "플롯 삭제"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:669
 msgid "Delete Unconfirmed Transactions"
 msgstr ""
 
@@ -710,7 +714,7 @@ msgstr "치아 지갑을 복구하기 위해서 24자로 된 니모닉 단어를
 msgid "Error"
 msgstr "오류"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:462
 msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
 msgstr "에러: 치아를 컬러드 주소로 보낼 수 없습니다. 치아 주소를 입력하세요."
 
@@ -746,7 +750,7 @@ msgstr "플롯 열기에 실패했습니다. (사유: 유효하지 않은 플롯
 
 #: src/components/dashboard/DashboardSideBar.tsx:55
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:538
 msgid "Farm"
 msgstr "농장"
 
@@ -807,6 +811,10 @@ msgstr "재배 중"
 msgid "Farming Status"
 msgstr "수확 상태"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:230
+msgid "Fast ~ 30 minutes"
+msgstr ""
+
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
@@ -817,7 +825,6 @@ msgstr "수확 상태"
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
 msgid "Fee"
 msgstr "수수료"
 
@@ -898,7 +905,7 @@ msgstr "새로운 컬러 만들기"
 msgid "Grid view"
 msgstr ""
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:589
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD키, 또는 \"계층구조 결정성 키\" 라고 부르는 이것은 개인 키 하나에 무한대에 가까운 공개키를 가질 수 있는 공개키 암호화 방식으로, 시드를 안전하게 보관하기만 한다면 언제든 시드로부터 개인키를 순차적으로 재생성할 수 있다는 장점을 지니고 있습니다."
 
@@ -1148,6 +1155,10 @@ msgstr "채굴 보상 관리"
 msgid "Manage Your Farming Rewards Target Addresses"
 msgstr "채굴 보상 타겟 경로 관리"
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:242
+msgid "Medium ~ 2 hours"
+msgstr ""
+
 #: src/components/fullNode/FullNodeConnections.tsx:68
 msgid "MiB Up/Down"
 msgstr "MiB 업로드/다운로드"
@@ -1168,6 +1179,10 @@ msgstr "많은 메모리는 약간의 속도 향상을 가져옵니다"
 msgid "My Pubkey"
 msgstr "나의 공개 키"
 
+#: src/components/wallet/standard/WalletStandard.tsx:525
+msgid "Network Fee"
+msgstr ""
+
 #: src/components/fullNode/card/FullNodeCardNetworkName.tsx:19
 msgid "Network Name"
 msgstr "네트워크 이름"
@@ -1181,7 +1196,7 @@ msgstr "네트워크 이름"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:585
 msgid "New Address"
 msgstr "새 주소"
 
@@ -1298,7 +1313,7 @@ msgstr "거래 제안"
 msgid "Offers Created"
 msgstr "거래 주문이 생성되었습니다."
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:491
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "당신이 보낸 트랜잭션(이체) 주문이 1분 이내로 처리된다고 느끼겠지만, 평균적으로는 각 트랜잭션 블록은 1분 정도의 차이를 두고 있습니다."
 
@@ -1361,7 +1376,7 @@ msgstr "유효한 초기 코인의 양을 입럭하십시오"
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:438
 msgid "Please enter a valid numeric amount"
 msgstr "유효한 수의 양을 입력하십시오"
 
@@ -1369,7 +1384,7 @@ msgstr "유효한 수의 양을 입력하십시오"
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:450
 msgid "Please enter a valid numeric fee"
 msgstr "유효한 수의 수수료를 입력하십시오"
 
@@ -1386,7 +1401,7 @@ msgid "Please enter a valid pubkey"
 msgstr "유효한 공개 키를 입력하십시오"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:426
 msgid "Please finish syncing before making a transaction"
 msgstr "거래 주문을 하기 위해서는 동기화가 완료되어야 합니다."
 
@@ -1708,7 +1723,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "비율 제한 사용자 지갑 설정"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:582
 msgid "Receive Address"
 msgstr "입금 주소"
 
@@ -1851,7 +1866,7 @@ msgstr "판매"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:548
 msgid "Send"
 msgstr "전송"
 
@@ -1891,6 +1906,10 @@ msgstr "로그인"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:195
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "농업용 수확기에 최종 디렉토리 추가 건너뛰기"
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:254
+msgid "Slow ~ 4 hours"
+msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
 msgid "Smooth out your XCH farming rewards by joining a pool."
@@ -2377,7 +2396,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:680
 msgid "Wallet Status:"
 msgstr ""
 
@@ -2618,6 +2637,6 @@ msgstr "{currencyCode} 채굴된 총 Chia"
 msgid "{currencyCode} User Transaction Fees"
 msgstr "{currencyCode} 사용자 거래 수수료"
 
-#: src/components/core/components/Amount/Amount.tsx:80
+#: src/components/core/components/Amount/Amount.tsx:84
 msgid "{mojo, plural, one {mojo} other {mojos}}"
 msgstr ""

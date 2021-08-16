@@ -7,6 +7,7 @@ import {
   TableCell,
   TableRow,
 } from '@material-ui/core';
+import TooltipIcon from '../TooltipIcon';
 import styled from 'styled-components';
 
 const StyledTableCell = styled(TableCell)`
@@ -42,6 +43,12 @@ export default function CardKeyValue(props: Props) {
             <StyledTableCell hideDivider={hideDivider}>
               <Typography variant="body1" color="textSecondary" noWrap>
                 {row.label}
+                {row.tooltip && (
+                  <>
+                   {' '}
+                    <TooltipIcon>{row.tooltip}</TooltipIcon>
+                  </>
+                )}
               </Typography>
             </StyledTableCell>
             <StyledTableCell align="right" hideDivider={hideDivider}>
