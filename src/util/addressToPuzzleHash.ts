@@ -13,6 +13,9 @@ export default function addressToPuzzleHash(address: string): string {
   try {
     return decode(puzzleHash);  
   } catch {
-    throw new Error(`This is not a valid chia address. ${address}`);
+    const error = new Error(`This is not a valid chia address. ${address}`);
+    error.code = 'INVALID_ADDRESS';
+
+    throw error;
   }
 }

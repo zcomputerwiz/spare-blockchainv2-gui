@@ -13,6 +13,8 @@ import Flex from '../Flex';
 
 const StyledCardContent = styled(CardContent)`
   padding-left: 72px;
+
+  // ${({ disabled }) => disabled ? 'filter: blur(0.3rem);' : undefined}
 `;
 
 const StyledStep = styled(Avatar)`
@@ -26,10 +28,11 @@ type Props = {
   step: ReactNode;
   action?: ReactNode;
   tooltip?: ReactNode;
+  disabled?: boolean;
 };
 
 export default function CardStep(props: Props) {
-  const { children, step, title, tooltip, action } = props;
+  const { children, step, title, tooltip, action, disabled } = props;
 
   return (
     <Card>
@@ -40,7 +43,7 @@ export default function CardStep(props: Props) {
         action={action}
       />
       <Divider />
-      <StyledCardContent>
+      <StyledCardContent disabled={disabled}>
         <Grid container>
           <Grid md={10} lg={8} item>
             <Flex flexDirection="column" gap={2}>

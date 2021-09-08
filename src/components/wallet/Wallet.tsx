@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Trans } from '@lingui/macro';
 import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
@@ -11,7 +11,12 @@ import WalletDID from './did/DIDWallet';
 import WalletType from '../../constants/WalletType';
 import type { RootState } from '../../modules/rootReducer';
 
-export default function Wallet() {
+type Props = {
+  headerTag?: ReactNode;
+};
+
+export default function Wallet(props: Props) {
+  const { headerTag } = props;
   const { walletId: walletIdParam } = useParams<{ walletId: string }>();
   const walletId = Number(walletIdParam);
   const wallets = useSelector((state: RootState) => state.wallet_state.wallets);
@@ -34,7 +39,7 @@ export default function Wallet() {
 
   if (wallet.type === WalletType.STANDARD_WALLET) {
     return (
-      <WalletStandard walletId={walletId} />
+      <WalletStandard walletId={walletId} headerTag={headerTag} />
     );
   }
 

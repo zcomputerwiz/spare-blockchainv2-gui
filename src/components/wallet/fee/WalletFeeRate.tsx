@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Alert } from '@material-ui/lab';
-import { Fee, Loading } from '@chia/core';
+import { Fee } from '@chia/core';
 import styled from 'styled-components';
 import { useController, useFormContext, useWatch } from 'react-hook-form';
-import { Trans } from '@lingui/macro';
+import { Trans, t, plural } from '@lingui/macro';
 import {
   Grid,
   TextField,
@@ -16,6 +16,13 @@ import { createFeeRateTransactions } from '../../../modules/incoming';
 import { mojo_to_chia_string, chia_to_mojo } from '../../../util/chia';
 import addressToPuzzleHash from '../../../util/addressToPuzzleHash';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
+import useWalletSyncingStatus from '../../../hooks/useWalletSyncingStatus';
+import SyncingStatus from '../../../constants/SyncingStatus';
+
+const SECONDS_PER_BLOCK = (24 * 60 * 60) / 4608; // 0.3125
+// const SHORT_SECONDS = SECONDS_PER_BLOCK * 10; // 3 minutes
+// const MEDIUM_SECONDS = SECONDS_PER_BLOCK * 60; // 18 minutes
+// const LONG_SECONDS = SECONDS_PER_BLOCK * 600;  // 180 minutes
 
 const StyledBase = styled.div`
   input {
@@ -114,7 +121,7 @@ RadioTextField.defaultProps = {
   variant: 'filled',
 };
 
-type FeeType = 'short' | 'medium' | 'long' | 'custom';
+type FeeRateType = 'short' | 'medium' | 'long' | 'custom';
 
 type Props = {
   address?: string;
@@ -122,7 +129,7 @@ type Props = {
   walletId: number;
   name?: string;
   feeName?: string;
-  selected?: FeeType;
+  feeRateName?: string;
 };
 
 type FeeRateTransaction = {
@@ -135,21 +142,22 @@ type FeeRateTransactions = {
   short: FeeRateTransaction;
   medium: FeeRateTransaction;
   long: FeeRateTransaction;
+  custom?: FeeRateTransaction;
 };
 
 export default function WalletFeeRate(props: Props) {
-  const { walletId, address, amount, name, feeName, selected: defaultSelected } = props;
+  const { walletId, address, amount, name, feeName, feeRateName } = props;
   const dispatch = useDispatch();
   const [loading, setLoading] = useState<boolean>(false);
+  const [feeRateTransactions, setFeeRateTransactions] = useState<FeeRateTransactions | undefined>();
   const { control, setError, clearErrors } = useFormContext();
-  const [selected, setSelected] = useState<FeeType | undefined>(defaultSelected);
-  const [feeRateTransactions, setFeeRateTransaction] = useState<FeeRateTransactions | undefined>(undefined);
   const currencyCode = useCurrencyCode();
+  const syncingStatus = useWalletSyncingStatus();
+  const isSynced = syncingStatus === SyncingStatus.SYNCED;
 
   const { 
     field: {
-      onChange,
-      value,
+      onChange: setTxId,
     },
     fieldState: {
       error,
@@ -159,57 +167,53 @@ export default function WalletFeeRate(props: Props) {
     control,
   });
 
+  const { 
+    field: {
+      onChange: setSelectedFeeRate,
+      value: selectedFeeRate,
+    },
+  } = useController({
+    name: feeRateName,
+    control,
+  });
+
+  const canSelect = isSynced && !!address;
+
   const feeValue = useWatch<string>({
     name: feeName,
   });
 
   async function prepare(walletId: number, address: string, amount: string) {
     try {
-      onChange('');
-      clearErrors(name);
-      setLoading(true);
-
-      if (!address) {
+      if (!address || !isSynced) {
         return;
       }
 
-      const puzzlehash = addressToPuzzleHash(address);
+      clearErrors([name, 'address']);
+      setLoading(true);
+      setFeeRateTransactions(undefined);
 
+      const puzzlehash = addressToPuzzleHash(address);
 
       const addition = {
         puzzlehash,
         amount: chia_to_mojo(amount ?? 0),
       };
 
-      if (feeValue && selected === 'custom') {
-        addition.fee_rate = Number.parseFloat(chia_to_mojo(feeValue));
-      }
+      const customFeeRate = feeValue && selectedFeeRate === 'custom'
+        ? Number.parseFloat(chia_to_mojo(feeValue))
+        : undefined;
 
-      const data = await dispatch(createFeeRateTransactions(walletId, [addition]));
+      const data = await dispatch(createFeeRateTransactions(walletId, [addition], customFeeRate));
       if (data.success !== true) {
         throw new Error(data.error);
       }
 
-      setFeeRateTransaction(data);
-
-      if (selected) {
-        const { short, medium, long, custom } = data;
-        if (selected === 'short') {
-          onChange(short?.tx_id);
-        }
-        if (selected === 'medium') {
-          onChange(medium?.tx_id);
-        }
-        if (selected === 'long') {
-          onChange(long?.tx_id);
-        }
-        if (selected === 'custom') {
-          onChange(custom?.tx_id);
-        }
-      }
+      setFeeRateTransactions(data);
     } catch (error) {
-      setError(name, {
-        type: "manual",
+      const fieldName = error.code === 'INVALID_ADDRESS' ? 'address' : name;
+      setError(fieldName, {
+        type: 'manual',
         message: error.message,
       });
     } finally {
@@ -217,27 +221,58 @@ export default function WalletFeeRate(props: Props) {
     }
   }
 
+  function updateTxId(feeRate: FeeRateType, feeRateTransactions?: FeeRateTransactions) {
+    setTxId('');
+
+    if (feeRateTransactions) {
+      const { short, medium, long, custom } = feeRateTransactions;
+      if (feeRate === 'short' && short?.tx_id) {
+        setTxId(short.tx_id);
+      }
+      if (feeRate === 'medium' && medium?.tx_id) {
+        setTxId(medium?.tx_id);
+      }
+      if (feeRate === 'long' && long?.tx_id) {
+        setTxId(long?.tx_id);
+      }
+      if (feeRate === 'custom' && custom?.tx_id) {
+        setTxId(custom?.tx_id);
+      }
+    }
+  }
+
   useEffect(() => {
     prepare(walletId, address, amount, feeValue);
-  }, [address, amount, feeValue]);
+  }, [walletId, address, amount, feeValue, isSynced]);
 
-  function handleSelect(type: FeeType, txId: string) {
-    setSelected(type);
-    onChange(txId);
+  useEffect(() => {
+    updateTxId(selectedFeeRate, feeRateTransactions);
+  }, [selectedFeeRate, feeRateTransactions]);
+
+  function handleSelect(type: FeeRateType) {
+    if (canSelect) {
+      setSelectedFeeRate(type);
+    }
   }
 
-  if (loading) {
-    return (
-      <Loading />
-    );
+  function formatFeeRateTransaction(feeRateTransaction: FeeRateTransaction, loading?: boolean, disabled?: boolean): string {
+    if (loading) {
+      return t`Loading...`;
+    }
+
+    if (!feeRateTransaction || disabled) {
+      return t`Not Available`;
+    }
+
+    return t`${mojo_to_chia_string(feeRateTransaction.fee)} ${currencyCode} (${plural(feeRateTransaction.fee_rate, { one: '# mojo', other: '# mojos' })}/vbyte)`;
   }
 
-  if (!feeRateTransactions) {
-    return null;
-  }
+  const { short, medium, long } = feeRateTransactions ?? {};
+  const isCustomSelected = selectedFeeRate === 'custom';
 
-  const { short, medium, long, custom } = feeRateTransactions;
-  const isCustomSelected = selected === 'custom';
+  const showedInfo = 
+    (!isSynced && <Trans>You need to wait for wallet synchronisation</Trans>)
+     || (!address && <Trans>You need to enter address first</Trans>);
 
   return (
     <Grid spacing={2} container>
@@ -248,14 +283,21 @@ export default function WalletFeeRate(props: Props) {
           </Alert>
         </Grid>
       )}
+      {!error && showedInfo && (
+        <Grid xs={12} item>
+          <Alert severity="info">
+            {showedInfo}
+          </Alert>
+        </Grid>
+      )}
       <Grid xs={12} item>
         <RadioTextField
           color="secondary"
-          label={<Trans>Fast ~ 30 minutes</Trans>}
-          value={`${mojo_to_chia_string(short.fee)} ${currencyCode} (${short.fee_rate}/vbyte)`}
-          selected={short.tx_id === value}
-          onSelect={() => handleSelect('short', short.tx_id)}
-          eventKey={short.tx_id}
+          label={<Trans>Fast ~ 3 minutes</Trans>}
+          value={formatFeeRateTransaction(short, loading, !canSelect)}
+          selected={selectedFeeRate === 'short'}
+          onSelect={() => handleSelect('short')}
+          disabled={!canSelect}
           readOnly
           fullWidth
         />
@@ -263,11 +305,11 @@ export default function WalletFeeRate(props: Props) {
       <Grid xs={12} item>
         <RadioTextField
           color="secondary"
-          label={<Trans>Medium ~ 2 hours</Trans>}
-          value={`${mojo_to_chia_string(medium.fee)} ${currencyCode} (${medium.fee_rate}/vbyte)`}
-          selected={medium.tx_id === value}
-          onSelect={() => handleSelect('medium', medium.tx_id)}
-          eventKey={medium.tx_id}
+          label={<Trans>Medium ~ 20 minutes</Trans>}
+          value={formatFeeRateTransaction(medium, loading, !canSelect)}
+          selected={selectedFeeRate === 'medium'}
+          onSelect={() => handleSelect('medium')}
+          disabled={!canSelect}
           readOnly
           fullWidth
         />
@@ -275,11 +317,11 @@ export default function WalletFeeRate(props: Props) {
       <Grid xs={12} item>
         <RadioTextField
           color="secondary"
-          label={<Trans>Slow ~ 4 hours</Trans>}
-          value={`${mojo_to_chia_string(long.fee)} ${currencyCode} (${long.fee_rate}/vbyte)`}
-          selected={long.tx_id === value}
-          onSelect={() => handleSelect('long', long.tx_id)}
-          eventKey={long.tx_id}
+          label={<Trans>Slow ~ 3 hours</Trans>}
+          value={formatFeeRateTransaction(long, loading, !canSelect)}
+          selected={selectedFeeRate === 'long'}
+          onSelect={() => handleSelect('long')}
+          disabled={!canSelect}
           readOnly
           fullWidth
         />
@@ -291,8 +333,9 @@ export default function WalletFeeRate(props: Props) {
             label={<Trans>Custom Fee</Trans>}
             name={feeName}
             variant="filled"
-            onClick={() => handleSelect('custom', custom?.tx_id)}
+            onClick={() => handleSelect('custom')}
             endAdornment={isCustomSelected ? <CheckIcon color="primary" /> : undefined}
+            disabled={!canSelect}
             fullWidth
           />
         </StyledBase>
@@ -304,5 +347,5 @@ export default function WalletFeeRate(props: Props) {
 WalletFeeRate.defaultProps = {
   name: 'tx_id',
   feeName: 'fee',
-  selected: undefined,
+  feeRateName: 'fee_rate',
 };

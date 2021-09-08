@@ -5,6 +5,7 @@ import {
   TextField as MaterialTextField,
   TextFieldProps as MaterialTextFieldProps,
 } from '@material-ui/core';
+import { error } from 'node:console';
 
 export type ReactRules<T> =
   | ControllerProps<ReactElement<T>>['rules']
@@ -53,7 +54,7 @@ export type TextFieldProps = MaterialTextFieldProps & {
 
 export default function TextField(props: TextFieldProps): JSX.Element {
   const { name, ...rest } = props;
-  const { control, errors } = useFormContext();
+  const { control, formState: { errors }  } = useFormContext();
   const errorMessage = get(errors, name);
 
   return (

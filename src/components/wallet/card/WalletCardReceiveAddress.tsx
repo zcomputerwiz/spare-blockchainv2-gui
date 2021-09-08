@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Button, CopyToClipboard, Card } from '@chia/core';
+import { Button, CopyToClipboard, Card, Flex } from '@chia/core';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   Box,
@@ -8,8 +8,9 @@ import {
   InputAdornment,
   Grid,
 } from '@material-ui/core';
-import { get_address } from '../../../modules/message';
+import { get_address, farm_block } from '../../../modules/message';
 import type { RootState } from '../../../modules/rootReducer';
+import config from '../../../config/config';
 
 type Props = {
   walletId: number;
@@ -33,13 +34,26 @@ export default function WalletCardReceiveAddress(props: Props) {
     dispatch(get_address(walletId, true));
   }
 
+  function handleFarm() {
+    if (address) {
+      dispatch(farm_block(address));
+    }
+  }
+
   return (
     <Card
       title={<Trans>Receive Address</Trans>}
       action={
-        <Button onClick={newAddress} variant="outlined">
-          <Trans>New Address</Trans>
-        </Button>
+        <Flex gap={1} alignItems="center">
+          {!!config.local_test && (
+            <Button onClick={handleFarm} variant="outlined" disabled={!address}>
+              <Trans>Farm</Trans>
+            </Button>
+          )}
+          <Button onClick={newAddress} variant="outlined">
+            <Trans>New Address</Trans>
+          </Button>
+        </Flex>
       }
       tooltip={
         <Trans>

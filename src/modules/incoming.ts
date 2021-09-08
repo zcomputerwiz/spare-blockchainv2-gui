@@ -30,7 +30,7 @@ export function createFeeRateTransactions(walletId: number, additions: Addition[
   };
 }
 
-export function sendFeeRateTransaction(txId: number) {
+export function sendFeeRateTransaction(txId: string) {
   return async (dispatch): Promise<Transaction> => {
     const { data } = await async_api(
       dispatch,

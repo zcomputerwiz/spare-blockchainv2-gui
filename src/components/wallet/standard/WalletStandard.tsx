@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Trans } from '@lingui/macro';
+
 import {
   Button,
   More,
@@ -7,7 +8,7 @@ import {
   ConfirmDialog,
 } from '@chia/core';
 import { useRouteMatch } from 'react-router-dom';
-import { Send as SendIcon } from '@material-ui/icons';
+import { Send as SendIcon, ChevronRight as ChevronRightIcon } from '@material-ui/icons';
 import { useDispatch } from 'react-redux';
 import {
   Box,
@@ -22,13 +23,15 @@ import WalletStandardCards from './WalletStandardCards';
 import WalletStatus from '../WalletStatus';
 import useOpenDialog from '../../../hooks/useOpenDialog';
 import WalletCardReceiveAddress from '../card/WalletCardReceiveAddress';
+import WalletStandardHeader from './WalletStandardHeader';
 
 type Props = {
   walletId: number;
+  headerTag?: ReactNode;
 };
 
 export default function StandardWallet(props: Props) {
-  const { walletId } = props;
+  const { walletId, headerTag: HeaderTag } = props;
   const dispatch = useDispatch();
   const openDialog = useOpenDialog();
   const { url } = useRouteMatch();
@@ -52,53 +55,30 @@ export default function StandardWallet(props: Props) {
 
   return (
     <Flex flexDirection="column" gap={1}>
-      <Flex gap={1} alignItems="center">
-        <Flex flexGrow={1}>
-          <Typography variant="h5" gutterBottom>
+      {/* HeaderTag && (
+        <HeaderTag>
+          <Flex alignItems="center">
+            <ChevronRightIcon color="secondary" />
             <Trans>Chia Wallet</Trans>
-          </Typography>
-        </Flex>
-        <Button
-          color="primary"
-          variant="outlined"
-          to={`${url}/send`}
-          startIcon={<SendIcon />}
-        >
-          <Trans>Send</Trans>
-        </Button>
-        <More>
-          {({ onClose }) => (
-            <Box>
-              <MenuItem
-                onClick={() => {
-                  onClose();
-                  handleDeleteUnconfirmedTransactions();
-                }}
-              >
-                <ListItemIcon>
-                  <DeleteIcon />
-                </ListItemIcon>
-                <Typography variant="inherit" noWrap>
-                  <Trans>Delete Unconfirmed Transactions</Trans>
-                </Typography>
-              </MenuItem>
-            </Box>
-          )}
-        </More>
-      </Flex>
-
-      <Flex flexDirection="column" gap={2}>
-        <Flex gap={1} justifyContent="flex-end">
-          <Typography variant="body1" color="textSecondary">
-            <Trans>Wallet Status:</Trans>
-          </Typography>
-          <WalletStatus height />
-        </Flex>
-        <Flex flexDirection="column" gap={3}>
-          <WalletStandardCards walletId={walletId} />
-          <WalletCardReceiveAddress walletId={walletId} />
-          <WalletHistory walletId={walletId} />
-        </Flex>
+          </Flex>
+        </HeaderTag>
+      ) */}
+      <WalletStandardHeader
+        actions={(
+          <Button
+            color="primary"
+            variant="outlined"
+            to={`${url}/send`}
+            startIcon={<SendIcon />}
+          >
+            <Trans>Send</Trans>
+          </Button>
+        )}
+      />
+      <Flex flexDirection="column" gap={3}>
+        <WalletStandardCards walletId={walletId} />
+        <WalletCardReceiveAddress walletId={walletId} />
+        <WalletHistory walletId={walletId} />
       </Flex>
     </Flex>
   );

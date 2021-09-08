@@ -11,9 +11,11 @@ import {
   Card,
   CardStep,
 } from '@chia/core';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router';
 import isNumeric from 'validator/es/lib/isNumeric';
 import { useForm, useWatch } from 'react-hook-form';
+import { ChevronRight as ChevronRightIcon } from '@material-ui/icons';
 import {
   Typography,
   Grid,
@@ -25,19 +27,20 @@ import {
 import { chia_to_mojo } from '../../util/chia';
 import { openDialog } from '../../modules/dialog';
 import { get_transaction_result } from '../../util/transaction_result';
-import config from '../../config/config';
 import type { RootState } from '../../modules/rootReducer';
 import WalletFeeRate from './fee/WalletFeeRate';
-import { useParams } from 'react-router';
 import useWalletSyncingStatus from '../../hooks/useWalletSyncingStatus';
 import SyncingStatus from '../../constants/SyncingStatus';
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import useWallet from '../../hooks/useWallet';
+import WalletStandardHeader from './standard/WalletStandardHeader';
+import { createFeeRateTransactions } from '../../modules/incoming';
 
 type SendTransactionData = {
   address: string;
   amount: string;
   fee: string;
+  fee_rate: 'short' | 'medium' | 'long' | 'custom' | '',
   tx_id: string;
 };
 
@@ -53,6 +56,7 @@ export default function WalletSend() {
       address: '',
       amount: '',
       fee: '',
+      fee_rate: '',
       tx_id: '',
     },
   });
@@ -67,17 +71,9 @@ export default function WalletSend() {
     name: 'amount',
   });
 
-  const txId = useWatch<string>({
-    control: methods.control,
-    name: 'tx_id',
-  });
-
-  const showNetworkFee = addressValue;
-
-  const { wallet, loading: loadingWallet } = useWallet(walletId);
   const syncingStatus = useWalletSyncingStatus();
+  const isSynced = syncingStatus === SyncingStatus.SYNCED;
 
-  const canSubmit = syncingStatus === SyncingStatus.SYNCED && txId && !loadingWallet && !!wallet;
 /*
   const { sending_transaction, send_transaction_result } = wallet;
 
@@ -86,20 +82,27 @@ export default function WalletSend() {
   const resultMessage = result.message;
   const resultSeverity = result.success ? 'success' : 'error';
 */
-  function farm() {
-    if (addressValue) {
-      dispatch(farm_block(addressValue));
-    }
-  }
 
   async function handleSubmit(values: SendTransactionData) {
-    let { amount, address, tx_id, fee } = values;
+    let { amount, address } = values;
+    const { tx_id, fee, fee_rate } = values;
 
-    if (syncing) {
+    if (!isSynced) {
       dispatch(
         openDialog(
           <AlertDialog>
-            <Trans>Please finish syncing before making a transaction</Trans>
+            <Trans>Please finish wallet syncing before making a transaction</Trans>
+          </AlertDialog>,
+        ),
+      );
+      return;
+    }
+
+    if (!fee_rate) {
+      dispatch(
+        openDialog(
+          <AlertDialog>
+            <Trans>Please select network fee or enter custom fee value</Trans>
           </AlertDialog>,
         ),
       );
@@ -112,18 +115,6 @@ export default function WalletSend() {
         openDialog(
           <AlertDialog>
             <Trans>Please enter a valid numeric amount</Trans>
-          </AlertDialog>,
-        ),
-      );
-      return;
-    }
-
-    fee = fee.trim();
-    if (!isNumeric(fee)) {
-      dispatch(
-        openDialog(
-          <AlertDialog>
-            <Trans>Please enter a valid numeric fee</Trans>
           </AlertDialog>,
         ),
       );
@@ -151,63 +142,101 @@ export default function WalletSend() {
       address = address.slice(2);
     }
 
-    const amountValue = Number.parseFloat(chia_to_mojo(amount));
-    const feeValue = Number.parseFloat(chia_to_mojo(fee));
+    if (fee_rate === 'custom') {
+      const customFee = fee.trim();
+      if (!isNumeric(customFee)) {
+        dispatch(
+          openDialog(
+            <AlertDialog>
+              <Trans>Please enter a valid numeric fee</Trans>
+            </AlertDialog>,
+          ),
+        );
+        return;
+      }
 
-    // dispatch(send_transaction(walletId, amountValue, feeValue, address));
+      const amountValue = Number.parseFloat(chia_to_mojo(amount));
+      const feeValue = Number.parseFloat(chia_to_mojo(customFee));
+
+      await dispatch(send_transaction(walletId, amountValue, feeValue, address));
+    } else {
+      if (!tx_id) {
+        dispatch(
+          openDialog(
+            <AlertDialog>
+              <Trans>Please select network fee or enter custom fee value</Trans>
+            </AlertDialog>,
+          ),
+        );
+        return;
+      }
+
+      await dispatch(sendFeeRateTransaction(tx_id));
+    }
 
     methods.reset();
   }
 
   return (
     <Form methods={methods} onSubmit={handleSubmit}>
-      <Flex flexDirection="column" gap={3}>
-        <CardStep
-          step="1"
-          title={<Trans>Send {currencyCode}</Trans>}
-          tooltip={
-            <Trans>
-              On average there is one minute between each transaction block. Unless
-              there is congestion you can expect your transaction to be included in
-              less than a minute.
-            </Trans>
-          }
-        >
-          {/* resultMessage && (
-            <Alert severity={resultSeverity}>
-              {resultMessage}
-            </Alert>
-          ) */}
-          
-          <Grid spacing={2} container>
-            <Grid xs={12} item>
-              <ChiaTextField
-                name="address"
-                variant="filled"
-                color="secondary"
-                fullWidth
-               // disabled={sending_transaction}
-                label={<Trans>Address / Puzzle Hash</Trans>}
-              />
+      <Flex flexDirection="column" gap={1}>
+        <WalletStandardHeader 
+          title={(
+            <Flex gap={1} alignItems="center">
+              <ChevronRightIcon color="secondary" />
+              <Typography variant="h5">
+                <Trans>Send {currencyCode}</Trans>
+              </Typography>
+            </Flex>
+          )}
+        />
+        <Flex flexDirection="column" gap={3}>
+          <CardStep
+            step="1"
+            title={<Trans>Basic Information</Trans>}
+            tooltip={
+              <Trans>
+                On average there is one minute between each transaction block. Unless
+                there is congestion you can expect your transaction to be included in
+                less than a minute.
+              </Trans>
+            }
+          >
+            {/* resultMessage && (
+              <Alert severity={resultSeverity}>
+                {resultMessage}
+              </Alert>
+            ) */}
+            
+            <Grid spacing={2} container>
+              <Grid xs={12} item>
+                <ChiaTextField
+                  name="address"
+                  variant="filled"
+                  color="secondary"
+                  fullWidth
+                // disabled={sending_transaction}
+                  label={<Trans>Address / Puzzle Hash</Trans>}
+                />
+              </Grid>
+              <Grid xs={12} item>
+                <Amount
+                  id="filled-secondary"
+                  variant="filled"
+                  color="secondary"
+                  name="amount"
+              //   disabled={sending_transaction}
+                  label={<Trans>Amount</Trans>}
+                  fullWidth
+                />
+              </Grid>
             </Grid>
-            <Grid xs={12} item>
-              <Amount
-                id="filled-secondary"
-                variant="filled"
-                color="secondary"
-                name="amount"
-             //   disabled={sending_transaction}
-                label={<Trans>Amount</Trans>}
-                fullWidth
-              />
-            </Grid>
-          </Grid>
-        </CardStep>
+          </CardStep>
 
-        {showNetworkFee && (
           <CardStep
             step="2"
             title={<Trans>Network Fee</Trans>}
+            disabled
           >
             <Typography variant="subtitle1">
               <Trans>
@@ -221,23 +250,16 @@ export default function WalletSend() {
               amount={amountValue}
             />
           </CardStep>
-        )}
 
-        <Flex gap={1}>
-          {!!config.local_test && (
-            <Button onClick={farm} variant="outlined">
-              <Trans>Farm</Trans>
+          <Flex gap={1}>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+            >
+              <Trans>Send</Trans>
             </Button>
-          )}
-
-          <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-           // disabled={canSubmit}
-          >
-            <Trans>Send</Trans>
-          </Button>
+          </Flex>
         </Flex>
       </Flex>
     </Form>

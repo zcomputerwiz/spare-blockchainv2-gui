@@ -117,9 +117,11 @@ export function createFeeRateTransactionsMessage(walletId, additions, feeRate) {
     additions,
   };
 
-  if (feeRate) {
+  if (feeRate !== undefined) {
     request.fee_rate = feeRate;
   }
+
+  console.log('request', request);
 
   return format_message('create_fee_rate_transactions', request);
 }
