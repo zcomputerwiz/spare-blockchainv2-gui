@@ -10,6 +10,7 @@ import {
   TextField,
   TextFieldProps,
   InputAdornment,
+  Typography,
 } from '@material-ui/core';
 import { Check as CheckIcon } from '@material-ui/icons';
 import { createFeeRateTransactions } from '../../../modules/incoming';
@@ -145,6 +146,26 @@ type FeeRateTransactions = {
   custom?: FeeRateTransaction;
 };
 
+function getFee(feeRateTransactions?: FeeRateTransactions, feeRate?: FeeRateType): number {
+  if (feeRateTransactions) {
+    const { short, medium, long, custom } = feeRateTransactions;
+    if (feeRate === 'short' && short) {
+      return short.fee;
+    }
+    if (feeRate === 'medium' && medium) {
+      return medium.fee;
+    }
+    if (feeRate === 'long' && long) {
+      return long.fee;
+    }
+    if (feeRate === 'custom' && custom) {
+      return custom.fee;
+    }
+  }
+
+  return 0;
+}
+
 export default function WalletFeeRate(props: Props) {
   const { walletId, address, amount, name, feeName, feeRateName } = props;
   const dispatch = useDispatch();
@@ -179,6 +200,10 @@ export default function WalletFeeRate(props: Props) {
 
   const canSelect = isSynced && !!address;
 
+  const amountMojos = chia_to_mojo(amount ?? 0);
+  const feeMojos = getFee(feeRateTransactions, selectedFeeRate);
+  const totalSpendMojos = amountMojos + feeMojos;
+
   const feeValue = useWatch<string>({
     name: feeName,
   });
@@ -197,7 +222,7 @@ export default function WalletFeeRate(props: Props) {
 
       const addition = {
         puzzlehash,
-        amount: chia_to_mojo(amount ?? 0),
+        amount: amountMojos,
       };
 
       const customFeeRate = feeValue && selectedFeeRate === 'custom'
@@ -330,7 +355,7 @@ export default function WalletFeeRate(props: Props) {
         <StyledBase selected={isCustomSelected}>
           <Fee
             color="secondary"
-            label={<Trans>Custom Fee</Trans>}
+            label={<Trans>Custom Fee Rate</Trans>}
             name={feeName}
             variant="filled"
             onClick={() => handleSelect('custom')}
@@ -340,6 +365,15 @@ export default function WalletFeeRate(props: Props) {
           />
         </StyledBase>
       </Grid>
+      {feeRateTransactions && (
+        <Grid xs={12} item>
+          <Typography color="textPrimary" variant="body2">
+            <Trans>
+              Total Spend: {mojo_to_chia_string(totalSpendMojos)} {currencyCode} (including {mojo_to_chia_string(feeMojos)} {currencyCode} of transaction fees)
+            </Trans>
+          </Typography>
+        </Grid>
+      )}
     </Grid>
   );
 }
