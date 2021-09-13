@@ -6,6 +6,8 @@ import {
   ConfirmDialog,
   Link,
 } from '@chia/core';
+import styled from 'styled-components';
+import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 import {
   Box,
@@ -13,21 +15,31 @@ import {
   ListItemIcon,
   MenuItem,
 } from '@material-ui/core';
-import { Delete as DeleteIcon } from '@material-ui/icons';
+import { Delete as DeleteIcon, ArrowBackIos as ArrowBackIosIcon } from '@material-ui/icons';
 import { deleteUnconfirmedTransactions } from '../../../modules/incoming';
 import useOpenDialog from '../../../hooks/useOpenDialog';
 import WalletStatus from '../WalletStatus';
+
+const BackIcon = styled(ArrowBackIosIcon)`
+  cursor: pointer;
+`;
 
 type Props = {
   walletId: number;
   actions?: ReactNode;
   title?: ReactNode;
+  back?: boolean;
 };
 
 export default function WalletStandardHeader(props: Props) {
-  const { walletId, actions, title } = props;
+  const { walletId, actions, title, back } = props;
   const dispatch = useDispatch();
   const openDialog = useOpenDialog();
+  const history = useHistory();
+
+  function handleGoBack() {
+    history.goBack();
+  }
 
   async function handleDeleteUnconfirmedTransactions() {
     const deleteConfirmed = await openDialog(
@@ -50,11 +62,15 @@ export default function WalletStandardHeader(props: Props) {
     <Flex gap={1} flexDirection="column">
       <Flex gap={1} alignItems="center">
         <Flex flexGrow={1} gap={1} alignItems="center">
-          <Link to="/dashboard/wallets" color="textPrimary">
-            <Typography variant="h5">
-              <Trans>Chia Wallet</Trans>
-            </Typography>
-          </Link>
+          {back ? (
+            <BackIcon onClick={handleGoBack} fontSize="medium" />
+          ) : (
+            <Link to="/dashboard/wallets" color="textPrimary">
+              <Typography variant="h5">
+                <Trans>Chia Wallet</Trans>
+              </Typography>
+            </Link>
+          )}
           {title}
         </Flex>
         {actions}
@@ -91,4 +107,5 @@ export default function WalletStandardHeader(props: Props) {
 WalletStandardHeader.defaultProps = {
   actions: undefined,
   title: undefined,
+  back: false,
 };

@@ -170,15 +170,13 @@ export default function WalletSend() {
   return (
     <Form methods={methods} onSubmit={handleSubmit}>
       <Flex flexDirection="column" gap={1}>
-        <WalletStandardHeader 
+        <WalletStandardHeader
           title={(
-            <Flex gap={1} alignItems="center">
-              <ChevronRightIcon color="secondary" />
               <Typography variant="h5">
                 <Trans>Send {currencyCode}</Trans>
               </Typography>
-            </Flex>
           )}
+          back
         />
         <Flex flexDirection="column" gap={3}>
           <CardStep
