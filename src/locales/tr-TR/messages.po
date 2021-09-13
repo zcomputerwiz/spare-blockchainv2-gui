@@ -72,7 +72,7 @@ msgstr "İşlemler"
 msgid "Add"
 msgstr "Ekle"
 
-#: src/components/plot/PlotHeader.tsx:91
+#: src/components/plot/PlotHeader.tsx:90
 msgid "Add Plot Directory"
 msgstr "Bir Plot Dizini Ekleyin"
 
@@ -85,7 +85,7 @@ msgstr "Plot'u Sıraya Ekle"
 #~ msgstr "Add Wallet"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:46
-#: src/components/plot/PlotHeader.tsx:63
+#: src/components/plot/PlotHeader.tsx:62
 #: src/components/plot/add/PlotAdd.tsx:160
 #: src/components/plot/overview/PlotOverviewHero.tsx:54
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:230
@@ -109,14 +109,17 @@ msgstr "Plot dizini ekle"
 msgid "Add {currencyCode} from the Faucet"
 msgstr ""
 
+#: src/components/wallet/card/WalletCardReceiveAddress.tsx:72
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:602
 msgid "Address"
 msgstr "Adres"
 
+#: src/components/wallet/WalletSend.tsx:201
+msgid "Address / Puzzle Hash"
+msgstr ""
+
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:509
 msgid "Address / Puzzle hash"
 msgstr "Adres / Puzzle hash"
 
@@ -124,9 +127,9 @@ msgstr "Adres / Puzzle hash"
 #: src/components/trading/CreateOffer.jsx:196
 #: src/components/trading/TradesTable.tsx:20
 #: src/components/wallet/WalletHistory.tsx:62
+#: src/components/wallet/WalletSend.tsx:211
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:519
 msgid "Amount"
 msgstr "Miktar"
 
@@ -144,7 +147,8 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Bu plot'u silmek istediğinizden emin misiniz? Silinen plot kurtarılamaz."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:125
-#: src/components/wallet/standard/WalletStandard.tsx:638
+#: src/components/wallet/standard/WalletStandard.tsx:46
+#: src/components/wallet/standard/WalletStandardHeader.tsx:51
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr ""
 
@@ -183,9 +187,13 @@ msgstr "Yedekleme dosyası akıllı cüzdanları geri yüklemek için kullanılm
 msgid "Balance"
 msgstr "Bakiye"
 
-#: src/components/block/Block.jsx:317
+#: src/components/block/Block.jsx:316
 msgid "Base Farmer Reward Amount"
 msgstr "Temel Madenci Ödül Miktarı"
+
+#: src/components/wallet/WalletSend.tsx:184
+msgid "Basic Information"
+msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:39
 #: src/components/farm/FarmLatestBlockChallenges.tsx:49
@@ -200,18 +208,18 @@ msgstr "Son 24 saat üzerindeki en iyi tahmin"
 #~ msgid "Best estimate over last 5 hours"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:129
-#: src/components/block/Block.jsx:153
+#: src/components/block/Block.jsx:131
+#: src/components/block/Block.jsx:155
 #: src/components/block/Block.jsx:157
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:331
 msgid "Block"
 msgstr "Blok"
 
-#: src/components/block/Block.jsx:137
+#: src/components/block/Block.jsx:139
 msgid "Block Test"
 msgstr "Blok Testi"
 
-#: src/components/block/Block.jsx:235
+#: src/components/block/Block.jsx:234
 msgid "Block VDF Iterations"
 msgstr "VDF Yinelemelerini Engelle"
 
@@ -223,11 +231,11 @@ msgstr "Chia blok zincirinde {0} yüksekliğinde engelle"
 #~ msgid "Block hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:141
+#: src/components/block/Block.jsx:143
 msgid "Block with hash {headerHash}"
 msgstr "Blok Hash {headerHash}"
 
-#: src/components/block/Block.jsx:162
+#: src/components/block/Block.jsx:161
 msgid "Block with hash {headerHash} does not exist."
 msgstr "{headerHash} Hash'li blok mevcut değil."
 
@@ -283,6 +291,10 @@ msgstr "İptal Et"
 msgid "Cancel and Spend"
 msgstr "İptal Et ve Harca"
 
+#: src/components/wallet/WalletSend.tsx:143
+msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgstr ""
+
 #: src/components/plot/PlotsNotFound.tsx:39
 msgid "Caution, deleting these plots will delete them forever. Check that the storage devices are properly connected."
 msgstr "Dikkat, bu plotları silmek onları sonsuza dek silecektir. Depolama cihazlarının doğru şekilde bağlanıp bağlanmadığını kontrol edin."
@@ -317,9 +329,13 @@ msgstr "Chia"
 msgid "Chia Blockchain Wiki"
 msgstr "Chia Blokchain Wiki"
 
-#: src/components/wallet/standard/WalletStandard.tsx:653
+#: src/components/wallet/standard/WalletStandardHeader.tsx:70
 msgid "Chia Wallet"
 msgstr "Chia Cüzdanı"
+
+#: src/components/wallet/WalletSend.tsx:224
+msgid "Chia transactions include a small fee for every transaction. The higher the fee, the faster your transaction will be processed."
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
@@ -383,7 +399,8 @@ msgid "Confirm Disconnect"
 msgstr "Bağlantıyı Kesmeyi Onayla"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:121
-#: src/components/wallet/standard/WalletStandard.tsx:634
+#: src/components/wallet/standard/WalletStandard.tsx:42
+#: src/components/wallet/standard/WalletStandardHeader.tsx:47
 msgid "Confirmation"
 msgstr ""
 
@@ -493,7 +510,6 @@ msgstr "Takas Teklifi Oluştur"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Create Transaction"
 msgstr "İşlem Oluşturun"
 
@@ -568,7 +584,11 @@ msgid "Current trade status"
 msgstr "Mevcut takas durumu"
 
 #: src/components/wallet/fee/WalletFeeRate.tsx:267
-msgid "Custom Fee"
+#~ msgid "Custom Fee"
+#~ msgstr ""
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:358
+msgid "Custom Fee Rate"
 msgstr ""
 
 #: src/components/selectKey/SelectKey.tsx:185
@@ -600,7 +620,8 @@ msgstr "Ertele"
 #: src/components/plotNFT/PlotNFTCard.tsx:122
 #: src/components/selectKey/SelectKey.tsx:67
 #: src/components/selectKey/SelectKey.tsx:109
-#: src/components/wallet/standard/WalletStandard.tsx:635
+#: src/components/wallet/standard/WalletStandard.tsx:43
+#: src/components/wallet/standard/WalletStandardHeader.tsx:48
 msgid "Delete"
 msgstr "Sil"
 
@@ -610,7 +631,7 @@ msgid "Delete Plot"
 msgstr "Arazi sil"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:315
-#: src/components/wallet/standard/WalletStandard.tsx:669
+#: src/components/wallet/standard/WalletStandardHeader.tsx:90
 msgid "Delete Unconfirmed Transactions"
 msgstr ""
 
@@ -643,7 +664,7 @@ msgstr "Geliştirici"
 msgid "Developer Tools"
 msgstr "Geliştirici araçları"
 
-#: src/components/block/Block.jsx:221
+#: src/components/block/Block.jsx:220
 #: src/components/fullNode/card/FullNodeCardDifficulty.tsx:20
 msgid "Difficulty"
 msgstr "Zorluk"
@@ -715,8 +736,8 @@ msgid "Error"
 msgstr "Hata"
 
 #: src/components/wallet/standard/WalletStandard.tsx:462
-msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Hata: Renkli adrese chia gönderemiyorum. Lütfen bir chia adresi girin."
+#~ msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
+#~ msgstr "Hata: Renkli adrese chia gönderemiyorum. Lütfen bir chia adresi girin."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -749,8 +770,8 @@ msgid "Failed to open (invalid plots)"
 msgstr "Açılamadı (geçersiz arazi)"
 
 #: src/components/dashboard/DashboardSideBar.tsx:55
+#: src/components/wallet/card/WalletCardReceiveAddress.tsx:50
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:538
 msgid "Farm"
 msgstr "Çiftlik"
 
@@ -758,7 +779,7 @@ msgstr "Çiftlik"
 msgid "Farmer Public Key"
 msgstr "Ana Açık Anahtar"
 
-#: src/components/block/Block.jsx:267
+#: src/components/block/Block.jsx:266
 msgid "Farmer Puzzle Hash"
 msgstr "Çiftçi bulmaca hashi"
 
@@ -811,9 +832,13 @@ msgstr "Üretim yapılıyor"
 msgid "Farming Status"
 msgstr "Üretim Durumu"
 
-#: src/components/wallet/fee/WalletFeeRate.tsx:230
-msgid "Fast ~ 30 minutes"
+#: src/components/wallet/fee/WalletFeeRate.tsx:321
+msgid "Fast ~ 3 minutes"
 msgstr ""
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:230
+#~ msgid "Fast ~ 30 minutes"
+#~ msgstr ""
 
 #: src/components/core/components/Fee/Fee.tsx:48
 #: src/components/plotNFT/PlotNFTAbsorbRewards.tsx:154
@@ -840,7 +865,7 @@ msgstr "Ücret"
 msgid "Fee ({currencyCode})"
 msgstr "Ücret ({currencyCode})"
 
-#: src/components/block/Block.jsx:321
+#: src/components/block/Block.jsx:320
 msgid "Fees Amount"
 msgstr "Komisyon Miktarı"
 
@@ -905,7 +930,7 @@ msgstr "Yeni Renk Oluştur"
 msgid "Grid view"
 msgstr ""
 
-#: src/components/wallet/standard/WalletStandard.tsx:589
+#: src/components/wallet/card/WalletCardReceiveAddress.tsx:59
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD veya Hiyerarşik Deterministik anahtarlar, bir public key/private anahtarın neredeyse sonsuz sayıda farklı genel anahtara sahip olabileceği (ve bu nedenle cüzdanın adresleri alabileceği), hepsi nihayetinde geri dönecek ve tek bir özel anahtar tarafından kullanılabilecek bir tür genel anahtar / özel anahtar şemasıdır."
 
@@ -921,11 +946,11 @@ msgstr ""
 msgid "Header Hash"
 msgstr "Baştaki Hash"
 
-#: src/components/block/Block.jsx:185
+#: src/components/block/Block.jsx:184
 msgid "Header hash"
 msgstr "Baştaki hash"
 
-#: src/components/block/Block.jsx:201
+#: src/components/block/Block.jsx:200
 #: src/components/fullNode/FullNode.jsx:81
 #: src/components/fullNode/FullNodeConnections.tsx:79
 msgid "Height"
@@ -1091,11 +1116,12 @@ msgstr "Liste Görünümü"
 msgid "Loading Plot NFTs"
 msgstr ""
 
-#: src/components/wallet/Wallets.tsx:172
+#: src/components/wallet/Wallets.tsx:34
 msgid "Loading list of wallets"
 msgstr ""
 
 #: src/components/plot/queue/PlotQueueLogDialog.tsx:41
+#: src/components/wallet/fee/WalletFeeRate.tsx:285
 msgid "Loading..."
 msgstr "Yükleniyor..."
 
@@ -1156,7 +1182,11 @@ msgid "Manage Your Farming Rewards Target Addresses"
 msgstr "İşleme ödülleri için gönderim adreslerini yönet"
 
 #: src/components/wallet/fee/WalletFeeRate.tsx:242
-msgid "Medium ~ 2 hours"
+#~ msgid "Medium ~ 2 hours"
+#~ msgstr ""
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:333
+msgid "Medium ~ 20 minutes"
 msgstr ""
 
 #: src/components/fullNode/FullNodeConnections.tsx:68
@@ -1179,7 +1209,7 @@ msgstr "Daha fazla memory hızı bir miktar artırır"
 msgid "My Pubkey"
 msgstr "Herkese Açık Anahtarım"
 
-#: src/components/wallet/standard/WalletStandard.tsx:525
+#: src/components/wallet/WalletSend.tsx:220
 msgid "Network Fee"
 msgstr ""
 
@@ -1195,8 +1225,8 @@ msgstr "Network Adı"
 #~ msgid "Network not launched yet, waiting for genesis challenge!"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
+#: src/components/wallet/card/WalletCardReceiveAddress.tsx:54
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:585
 msgid "New Address"
 msgstr "Yeni Adres"
 
@@ -1204,7 +1234,7 @@ msgstr "Yeni Adres"
 msgid "New Wallet"
 msgstr "Yeni Cüzdan"
 
-#: src/components/block/Block.jsx:350
+#: src/components/block/Block.jsx:349
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:163
 msgid "Next"
@@ -1258,6 +1288,7 @@ msgstr "Henüz plot'larınızdan hiçbiri plot filtresinden geçemedi."
 #: src/components/farm/card/FarmCardNotAvailable.tsx:23
 #: src/components/plot/PlotStatus.tsx:19
 #: src/components/plotNFT/PlotNFTCard.tsx:365
+#: src/components/wallet/fee/WalletFeeRate.tsx:289
 msgid "Not Available"
 msgstr "Uygun Değil"
 
@@ -1313,7 +1344,7 @@ msgstr "Teklif"
 msgid "Offers Created"
 msgstr "Teklif Oluşturuldu"
 
-#: src/components/wallet/standard/WalletStandard.tsx:491
+#: src/components/wallet/WalletSend.tsx:186
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Ortalama olarak, her işlem bloğu arasında bir dakika vardır. Tıkanıklık olmadığı sürece işleminizin bir dakikadan daha kısa sürede gerçekleşmesini bekleyebilirsiniz."
 
@@ -1374,9 +1405,9 @@ msgstr "Lütfen komisyonu 0 giriniz. Komisyonlara pozitif sayı girilmesi henüz
 msgid "Please enter a valid initial coin amount"
 msgstr "Lütfen geçerli bir başlangıç bakiyesi miktarı girin"
 
+#: src/components/wallet/WalletSend.tsx:132
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:438
 msgid "Please enter a valid numeric amount"
 msgstr "Lütfen geçerli bir sayısal miktar giriniz"
 
@@ -1384,7 +1415,6 @@ msgstr "Lütfen geçerli bir sayısal miktar giriniz"
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:450
 msgid "Please enter a valid numeric fee"
 msgstr "Lütfen geçerli bir sayısal komisyon giriniz"
 
@@ -1401,9 +1431,12 @@ msgid "Please enter a valid pubkey"
 msgstr "Lütfen geçerli bir herkese açık anahtar giriniz"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:426
 msgid "Please finish syncing before making a transaction"
 msgstr "Lütfen transfer yapmadan önce senkronizasyonu bitirin"
+
+#: src/components/wallet/WalletSend.tsx:109
+msgid "Please finish wallet syncing before making a transaction"
+msgstr ""
 
 #: src/components/trading/CreateOffer.jsx:66
 msgid "Please select amount"
@@ -1420,6 +1453,10 @@ msgstr "Lütfen coin rengi seçin"
 #: src/components/trading/CreateOffer.jsx:63
 #~ msgid "Please select coin type"
 #~ msgstr ""
+
+#: src/components/wallet/WalletSend.tsx:120
+msgid "Please select network fee or enter custom fee value"
+msgstr ""
 
 #: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:45
 #: src/components/plot/add/PlotAddSelectFinalDirectory.tsx:49
@@ -1448,7 +1485,7 @@ msgstr "Plot"
 msgid "Plot Count"
 msgstr "Plot Sayısı"
 
-#: src/components/block/Block.jsx:299
+#: src/components/block/Block.jsx:298
 msgid "Plot Id"
 msgstr "Plot Kimliği"
 
@@ -1469,7 +1506,7 @@ msgstr ""
 #~ msgid "Plot Name"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:259
+#: src/components/block/Block.jsx:258
 msgid "Plot Public Key"
 msgstr "Herkese Açık Plot Anahtarı"
 
@@ -1561,12 +1598,12 @@ msgstr ""
 msgid "Pool Payout Instructions"
 msgstr ""
 
-#: src/components/block/Block.jsx:263
+#: src/components/block/Block.jsx:262
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:222
 msgid "Pool Public Key"
 msgstr "Herkese Açık Havuz Anahtarı"
 
-#: src/components/block/Block.jsx:283
+#: src/components/block/Block.jsx:282
 msgid "Pool Puzzle Hash"
 msgstr "Karma Havuz Bulmacası"
 
@@ -1586,7 +1623,7 @@ msgstr ""
 msgid "Pool Reward Address must not be empty."
 msgstr ""
 
-#: src/components/block/Block.jsx:313
+#: src/components/block/Block.jsx:312
 msgid "Pool Reward Amount"
 msgstr "Havuz Ödül Miktarı"
 
@@ -1629,7 +1666,7 @@ msgstr ""
 msgid "Preparing standard wallet"
 msgstr ""
 
-#: src/components/block/Block.jsx:347
+#: src/components/block/Block.jsx:346
 msgid "Previous"
 msgstr "Önceki"
 
@@ -1637,7 +1674,7 @@ msgstr "Önceki"
 #~ msgid "Previous Block Hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:215
+#: src/components/block/Block.jsx:214
 msgid "Previous Header Hash"
 msgstr "Önceki Başlık Karması"
 
@@ -1657,7 +1694,7 @@ msgstr "Özel anahtar"
 msgid "Private key:"
 msgstr "Özel Anahtar:"
 
-#: src/components/block/Block.jsx:251
+#: src/components/block/Block.jsx:250
 msgid "Proof of Space Size"
 msgstr "Boşluk Kanıtı Boyutu"
 
@@ -1722,8 +1759,8 @@ msgstr "Hız Limit Ayarı"
 msgid "Rate Limited User Wallet Setup"
 msgstr "Hız Limitli Kullanıcı Cüzdanı Kurulumu"
 
+#: src/components/wallet/card/WalletCardReceiveAddress.tsx:45
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:582
 msgid "Receive Address"
 msgstr "Alıcının adresi"
 
@@ -1731,7 +1768,7 @@ msgstr "Alıcının adresi"
 msgid "Recover DID wallet"
 msgstr "Eski cüzdanınızı kurtarma"
 
-#: src/components/plot/PlotHeader.tsx:78
+#: src/components/plot/PlotHeader.tsx:77
 #: src/components/plot/overview/PlotOverviewHero.tsx:62
 msgid "Refresh Plots"
 msgstr "Plot'ları Yenile"
@@ -1864,9 +1901,10 @@ msgstr ""
 msgid "Sell"
 msgstr "Satış"
 
+#: src/components/wallet/WalletSend.tsx:243
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:548
+#: src/components/wallet/standard/WalletStandard.tsx:74
 msgid "Send"
 msgstr "Gönder"
 
@@ -1877,6 +1915,10 @@ msgstr "Bu bilgi paketini, cüzdanlarının kurulumunu tamamlamak için kullanma
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:279
 msgid "Send your pubkey to your Rate Limited Wallet admin:"
 msgstr "Yayın anahtarınızı Rate Limited Cüzdan yöneticinize gönderin:"
+
+#: src/components/wallet/WalletSend.tsx:176
+msgid "Send {currencyCode}"
+msgstr ""
 
 #: src/components/core/components/AdvancedOptions/AdvancedOptions.tsx:74
 msgid "Show Advanced Options"
@@ -1907,9 +1949,13 @@ msgstr "Oturum Aç"
 msgid "Skips adding a final directory to harvester for farming"
 msgstr "Kazıcıya madencilik için son konum eklemeyi atla"
 
-#: src/components/wallet/fee/WalletFeeRate.tsx:254
-msgid "Slow ~ 4 hours"
+#: src/components/wallet/fee/WalletFeeRate.tsx:345
+msgid "Slow ~ 3 hours"
 msgstr ""
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:254
+#~ msgid "Slow ~ 4 hours"
+#~ msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
 msgid "Smooth out your XCH farming rewards by joining a pool."
@@ -1964,7 +2010,6 @@ msgstr "Bölge"
 #: src/components/trading/TradingOverview.jsx:128
 #: src/components/wallet/WalletHistory.tsx:55
 #: src/components/wallet/WalletStatusCard.tsx:22
-#: src/components/wallet/Wallets.tsx:118
 msgid "Status"
 msgstr "Durum"
 
@@ -2101,19 +2146,19 @@ msgstr ""
 msgid "The pool switching operation was cancelled, please try again by changing pool, or self pooling"
 msgstr ""
 
-#: src/components/block/Block.jsx:302
+#: src/components/block/Block.jsx:301
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "Arsa oluşturmak için kullanılan tohum. Bu, pk havuzuna ve pk plotuna bağlıdır."
 
-#: src/components/block/Block.jsx:228
+#: src/components/block/Block.jsx:227
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on the whole chain up to this sub block."
 msgstr "Toplam VDF sayısı (doğrulanabilir gecikme fonksiyonu) veya alt bloğa kadar tüm zincirdeki zaman yinelemelerinin kanıtı."
 
-#: src/components/block/Block.jsx:244
+#: src/components/block/Block.jsx:243
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "Toplam VDF sayısı (doğrulanabilir gecikme fonksiyonu) veya bu bloktaki zaman yinelemelerinin kanıtı."
 
-#: src/components/block/Block.jsx:324
+#: src/components/block/Block.jsx:323
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Bu bloktaki toplam işlem ücretleri. Çiftçi ödüllendirildi."
 
@@ -2156,7 +2201,7 @@ msgstr "Bu toplam, gelen, giden ve bekleyen işlemlerin toplamıdır (henüz blo
 msgid "This is the time of the latest peak sub block."
 msgstr "Bu, en son tepe alt bloğunun zamanıdır."
 
-#: src/components/block/Block.jsx:194
+#: src/components/block/Block.jsx:193
 msgid "This is the time the block was created by the farmer, which is before it is finalized with a proof of time"
 msgstr "Bu, bloğun çiftçi tarafından oluşturulduğu zamandır ve bu, bir zaman kanıtıyla sonuçlandırılmadan öncedir"
 
@@ -2218,7 +2263,7 @@ msgstr "Oluşturulma Zamanı"
 #~ msgid "Time this trade was created at this time"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:189
+#: src/components/block/Block.jsx:188
 msgid "Timestamp"
 msgstr "Zaman damgası"
 
@@ -2252,7 +2297,11 @@ msgstr "Plot'un Toplam Boyutu:"
 msgid "Total Size of Plots"
 msgstr "Plot'ların Toplam Boyutu"
 
-#: src/components/block/Block.jsx:225
+#: src/components/wallet/fee/WalletFeeRate.tsx:371
+msgid "Total Spend: {0} {currencyCode} (including {1} {currencyCode} of transaction fees)"
+msgstr ""
+
+#: src/components/block/Block.jsx:224
 msgid "Total VDF Iterations"
 msgstr "Toplam VDF Yinelemeleri"
 
@@ -2292,7 +2341,7 @@ msgstr "Ticaret"
 msgid "Trading History"
 msgstr "Ticaret Geçmişi"
 
-#: src/components/block/Block.jsx:309
+#: src/components/block/Block.jsx:308
 msgid "Transactions Filter Hash"
 msgstr "Karma Transfer Filtresi"
 
@@ -2323,6 +2372,10 @@ msgstr "Bilinmeyen"
 
 #: src/components/core/components/FormBackButton/FormBackButton.tsx:25
 msgid "Unsaved Changes"
+msgstr ""
+
+#: src/components/wallet/Wallet.tsx:67
+msgid "Unsupported type of wallet"
 msgstr ""
 
 #: src/components/wallet/create/createRLAdmin.jsx:281
@@ -2396,8 +2449,12 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:680
+#: src/components/wallet/standard/WalletStandardHeader.tsx:99
 msgid "Wallet Status:"
+msgstr ""
+
+#: src/components/wallet/Wallet.tsx:35
+msgid "Wallet does not exists"
 msgstr ""
 
 #: src/components/wallet/Wallets.tsx:34
@@ -2429,7 +2486,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/dashboard/DashboardSideBar.tsx:45
-#: src/components/wallet/Wallets.tsx:173
+#: src/components/wallet/Wallets.tsx:38
 msgid "Wallets"
 msgstr "Cüzdanlar"
 
@@ -2461,11 +2518,11 @@ msgstr ""
 msgid "Warning: This key is used for your pool rewards address. By deleting this key you may lose access to any future pool rewards"
 msgstr ""
 
-#: src/components/block/Block.jsx:205
+#: src/components/block/Block.jsx:204
 msgid "Weight"
 msgstr "Ağırlık"
 
-#: src/components/block/Block.jsx:208
+#: src/components/block/Block.jsx:207
 msgid "Weight is the total added difficulty of all sub blocks up to and including this one"
 msgstr "Ağırlık, buna kadar ve buna dahil tüm alt blokların toplam zorluğudur"
 
@@ -2540,9 +2597,17 @@ msgstr "Ağ üzerinde % {0} alana sahipsiniz. bu yüzden bir bloğu kazmak etmek
 msgid "You need to claim your rewards first"
 msgstr ""
 
+#: src/components/wallet/fee/WalletFeeRate.tsx:300
+msgid "You need to enter address first"
+msgstr ""
+
 #: src/components/app/AppTimeBomb.tsx:28
 #~ msgid "You need to upgrade the Chia application as this version will stop working soon!"
 #~ msgstr "You need to upgrade the Chia application as this version will stop working soon!"
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:299
+msgid "You need to wait for wallet synchronisation"
+msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -2581,35 +2646,30 @@ msgid "[Error 22] File not found. Most likely one of the plot folders in your co
 msgstr "[Error 22] Dosya bulunamadı. Muhtemelen config.yaml dosyanızdaki çizim klasörlerinden birinde bir sorun vardır."
 
 #: src/components/wallet/WalletStatusCard.tsx:41
-#: src/components/wallet/Wallets.tsx:143
 msgid "connections:"
 msgstr "bağlantılar:"
 
 #: src/components/wallet/WalletStatusCard.tsx:33
-#: src/components/wallet/Wallets.tsx:135
 msgid "height:"
 msgstr "yükseklik:"
 
 #: src/components/wallet/Wallets.tsx:129
-msgid "not synced"
-msgstr "senkronize edilmedi"
+#~ msgid "not synced"
+#~ msgstr "senkronize edilmedi"
 
 #: src/components/plot/add/PlotAdd.tsx:105
 msgid "p2_singleton_puzzle_hash is not defined"
 msgstr ""
 
 #: src/components/wallet/WalletStatusCard.tsx:27
-#: src/components/wallet/Wallets.tsx:123
 msgid "status:"
 msgstr "durum:"
 
 #: src/components/wallet/WalletStatusCard.tsx:29
-#: src/components/wallet/Wallets.tsx:128
 msgid "synced"
 msgstr "senkronize edildi"
 
 #: src/components/wallet/WalletStatusCard.tsx:29
-#: src/components/wallet/Wallets.tsx:127
 msgid "syncing"
 msgstr "senkronize ediliyor"
 
@@ -2623,6 +2683,10 @@ msgstr "senkronize ediliyor"
 
 #: src/components/plotNFT/PlotNFTGraph.tsx:111
 msgid "{0} points {1} - {2} hours ago"
+msgstr ""
+
+#: src/components/wallet/fee/WalletFeeRate.tsx:292
+msgid "{0} {currencyCode} ({1, plural, one {# mojo} other {# mojos}}/vbyte)"
 msgstr ""
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:35
