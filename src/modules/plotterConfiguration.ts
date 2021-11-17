@@ -5,8 +5,8 @@ import Plotter, { PlotterMap } from '../types/Plotter';
 export const defaultPlotter = (): Plotter => {
   return {
     displayName: "replaceme Proof of Space",
-    options: optionsForPlotter(PlotterName.replacemePOS),
-    defaults: defaultsForPlotter(PlotterName.replacemePOS),
+    options: optionsForPlotter(PlotterName.chiapos),
+    defaults: defaultsForPlotter(PlotterName.chiapos),
     installInfo: { installed: true },
   }
 }
@@ -18,7 +18,7 @@ type PlotterConfigurationState = {
 
 const initialState: PlotterConfigurationState = {
   availablePlotters: {
-    [PlotterName.replacemePOS]: defaultPlotter(),
+    [PlotterName.chiapos]: defaultPlotter(),
   },
   fetchedPlotters: false,
 }

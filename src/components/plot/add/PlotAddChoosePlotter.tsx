@@ -34,8 +34,8 @@ export default function PlotAddChoosePlotter(props: Props) {
 
   function displayablePlotters(plotters: PlotterMap<PlotterName, Plotter>): PlotterName[] {
     const displayablePlotters = Object.keys(plotters) as PlotterName[];
-    // Sort replacemepos to the top of the list
-    displayablePlotters.sort((a, b) => a == PlotterName.replacemePOS ? -1 : a.localeCompare(b));
+    // Sort chiapos to the top of the list
+    displayablePlotters.sort((a, b) => a == PlotterName.chiapos ? -1 : a.localeCompare(b));
     return displayablePlotters;
   }
 

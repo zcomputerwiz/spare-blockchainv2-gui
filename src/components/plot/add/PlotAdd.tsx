@@ -75,7 +75,7 @@ export default function PlotAdd() {
 
   const methods = useForm<FormData>({
     shouldUnregister: false,
-    defaultValues: defaultsForPlotter(PlotterName.replacemePOS),
+    defaultValues: defaultsForPlotter(PlotterName.chiapos),
   });
 
   const { watch, setValue, reset } = methods;
