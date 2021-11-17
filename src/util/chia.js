@@ -12,7 +12,7 @@ const convert = (amount, from, to) => {
   return Number.parseFloat(amountInFromUnit.div(units.getUnit(to)));
 };
 
-class Chia {
+class replaceme {
   constructor(value, unit) {
     this._value = value;
     this._unit = unit;
@@ -73,42 +73,42 @@ class Chia {
   }
 }
 
-export const chia_formatter = (value, unit) => new Chia(value, unit);
+export const replaceme_formatter = (value, unit) => new replaceme(value, unit);
 
-chia_formatter.convert = convert;
-chia_formatter.setDisplay = units.setDisplay;
-chia_formatter.setUnit = units.setUnit;
-chia_formatter.getUnit = units.getUnit;
-chia_formatter.setFiat = (currency, rate, display = null) => {
+replaceme_formatter.convert = convert;
+replaceme_formatter.setDisplay = units.setDisplay;
+replaceme_formatter.setUnit = units.setUnit;
+replaceme_formatter.getUnit = units.getUnit;
+replaceme_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const mojo_to_chia = (mojo) => {
-  return chia_formatter(Number.parseInt(mojo), 'mojo').to('chia').value();
+export const mojo_to_replaceme = (mojo) => {
+  return replaceme_formatter(Number.parseInt(mojo), 'mojo').to('replaceme').value();
 };
 
-export const chia_to_mojo = (chia) => {
-  return chia_formatter(Number.parseFloat(Number(chia)), 'chia')
+export const replaceme_to_mojo = (replaceme) => {
+  return replaceme_formatter(Number.parseFloat(Number(replaceme)), 'replaceme')
     .to('mojo')
     .value();
 };
 
-export const mojo_to_chia_string = (mojo) => {
-  return chia_formatter(Number(mojo), 'mojo').to('chia').toString();
+export const mojo_to_replaceme_string = (mojo) => {
+  return replaceme_formatter(Number(mojo), 'mojo').to('replaceme').toString();
 };
 
 export const mojo_to_colouredcoin = (mojo) => {
-  return chia_formatter(Number.parseInt(mojo), 'mojo')
+  return replaceme_formatter(Number.parseInt(mojo), 'mojo')
     .to('colouredcoin')
     .value();
 };
 
 export const colouredcoin_to_mojo = (colouredcoin) => {
-  return chia_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
+  return replaceme_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
     .to('mojo')
     .value();
 };
 
 export const mojo_to_colouredcoin_string = (mojo) => {
-  return chia_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
+  return replaceme_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
 };

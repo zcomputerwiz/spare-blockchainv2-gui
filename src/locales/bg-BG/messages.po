@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: bg_BG\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: replaceme-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-09-17 17:40\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: replaceme-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: bg\n"
-"X-Crowdin-File: /[Chia-Network.chia-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[replaceme-Network.replaceme-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:78
@@ -31,8 +31,8 @@ msgid "(Optional)"
 msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore Chia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-msgstr "Chia Explorer"
+msgid "*Want to explore replaceme’s blocks further? Check out <0>replaceme Explorer</0> built by an open source developer."
+msgstr "replaceme Explorer"
 
 #: src/components/plot/add/PlotAddNFT.tsx:128
 msgid "+ Add New Plot NFT"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/electron/main.tsx:431
 #: src/electron/main.tsx:518
-msgid "About Chia Blockchain"
+msgid "About replaceme Blockchain"
 msgstr "Относно Чиа Блокчейн"
 
 #: src/components/trading/ViewOffer.jsx:74
@@ -250,8 +250,8 @@ msgid "Block VDF Iterations"
 msgstr "Общи брой VDF повторения"
 
 #: src/components/block/Block.jsx:337
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Блокирайте на височина {0} в блокчейна Chia"
+msgid "Block at height {0} in the replaceme blockchain"
+msgstr "Блокирайте на височина {0} в блокчейна replaceme"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -355,16 +355,16 @@ msgid "Chat on KeyBase"
 msgstr "Чат в KeyBase"
 
 #: src/electron/main.tsx:428
-msgid "Chia"
+msgid "replaceme"
 msgstr "Чиа"
 
 #: src/electron/main.tsx:367
-msgid "Chia Blockchain Wiki"
+msgid "replaceme Blockchain Wiki"
 msgstr "Чиа блокчейн Wiki"
 
 #: src/components/wallet/standard/WalletStandard.tsx:642
-msgid "Chia Wallet"
-msgstr "Chia Портфейл"
+msgid "replaceme Wallet"
+msgstr "replaceme Портфейл"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 msgid "Choose Number of Plots"
@@ -724,7 +724,7 @@ msgstr ""
 #~ msgstr "Изтриването на ключа необратимо ще премахне всички ключа от компютъра, подсигури се че имаш точка за възстановяване! Сигурен ли си че искаш да продължиш?"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:96
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default replaceme Proof of Space plotter. If unsure, use the default replaceme Proof of Space plotter."
 msgstr ""
 
 #: src/electron/main.tsx:313
@@ -825,8 +825,8 @@ msgid "Enter a strong passphrase to secure your keys:"
 msgstr ""
 
 #: src/components/wallet/WalletImport.tsx:146
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
-msgstr "Въведи 24 думения ключ който сте запазили за да възстановите вашият Chia портфейл."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your replaceme wallet."
+msgstr "Въведи 24 думения ключ който сте запазили за да възстановите вашият replaceme портфейл."
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:118
 msgid "Enter your passphrase:"
@@ -843,8 +843,8 @@ msgid "Error"
 msgstr "Грешка"
 
 #: src/components/wallet/standard/WalletStandard.tsx:450
-msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Грешка: Неуспешно изпращане на Chia до избрания адрес. Моля въведете Chia адрес."
+msgid "Error: Cannot send replaceme to coloured address. Please enter a replaceme address."
+msgstr "Грешка: Неуспешно изпращане на replaceme до избрания адрес. Моля въведете replaceme адрес."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -1795,7 +1795,7 @@ msgid "Plots Passed Filter"
 msgstr "Филтър за преминали плотове"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn replaceme. <0>Learn more</0>"
 msgstr "Плотовете са разпределено място на вашия хард диск, които се ползват за фармете и печелене на Чиа. <0>Научете повече</0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:107
@@ -2313,7 +2313,7 @@ msgstr ""
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (chia per interval): {0}"
+msgid "Spending Limit (replaceme per interval): {0}"
 msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:100
@@ -2362,8 +2362,8 @@ msgstr "Статус:"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Chia blockchain"
-#~ msgstr "Sub Block at height {0} in the Chia blockchain"
+#~ msgid "Sub Block at height {0} in the replaceme blockchain"
+#~ msgstr "Sub Block at height {0} in the replaceme blockchain"
 
 #: src/components/app/AppPassPrompt.tsx:202
 #: src/components/wallet/did/WalletDID.tsx:889
@@ -2521,8 +2521,8 @@ msgid "This feature is available only from the GUI."
 msgstr "Тази функция е налична само в графична среда."
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "Това е количеството Chia, което в момента можете да използвате за извършване на транзакции. То не включва чакащи фармерски награди, чакащи входящи транзакции и Chia, които току-що сте похарчили, но все още не са в блокчейна."
+msgid "This is the amount of replaceme that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and replaceme that you have just spent but is not yet in the blockchain."
+msgstr "Това е количеството replaceme, което в момента можете да използвате за извършване на транзакции. То не включва чакащи фармерски награди, чакащи входящи транзакции и replaceme, които току-що сте похарчили, но все още не са в блокчейна."
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -2541,7 +2541,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr ""
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of chia in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of replaceme in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr ""
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2587,8 +2587,8 @@ msgid "This trade was included on blockchain at this block height"
 msgstr "Тази сделка беше включена в блокчейн на тази височина на блока"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
-msgstr "Тази версия на Chia вече не е съвместима с блокчейна и не може безопасно да се обработва."
+msgid "This version of replaceme is no longer compatible with the blockchain and can not safely farm."
+msgstr "Тази версия на replaceme вече не е съвместима с блокчейна и не може безопасно да се обработва."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:154
 msgid "Thread Multiplier for Phase 2"
@@ -2616,8 +2616,8 @@ msgstr "Към"
 msgid "Total Balance"
 msgstr "Общ баланс"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:15
-#~ msgid "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:15
+#~ msgid "Total replaceme Farmed"
 #~ msgstr ""
 
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:20
@@ -2801,7 +2801,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.chiaWallet"
+#~ msgid "WalletItem.replacemeWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -2838,8 +2838,8 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr ""
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-msgid "Want to earn more Chia? Add more plots to your farm."
-msgstr "Искате да получавате повече Chia? Добавете повече полета в фермата си."
+msgid "Want to earn more replaceme? Add more plots to your farm."
+msgstr "Искате да получавате повече replaceme? Добавете повече полета в фермата си."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:87
 msgid "Want to have a delay before the next plot starts?"
@@ -2871,8 +2871,8 @@ msgid "Weight is the total added difficulty of all sub blocks up to and includin
 msgstr ""
 
 #: src/components/selectKey/SelectKey.tsx:183
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Добре дошли в Chia. Моля влезте със съществуващ ключ или създайте нов."
+msgid "Welcome to replaceme. Please log in with an existing key, or create a new key."
+msgstr "Добре дошли в replaceme. Моля влезте със съществуващ ключ или създайте нов."
 
 #: src/components/wallet/WalletAdd.tsx:66
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -2946,8 +2946,8 @@ msgid "You need to claim your rewards first"
 msgstr ""
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Chia application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Chia application as this version will stop working soon!"
+#~ msgid "You need to upgrade the replaceme application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the replaceme application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -3004,7 +3004,7 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:177
 #: src/components/settings/ChangePassphrasePrompt.tsx:227
 #: src/components/settings/SetPassphrasePrompt.tsx:197
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
+msgid "Your passphrase can be stored in your system's secure credential store. replaceme will be able to access your keys without prompting for your passphrase."
 msgstr ""
 
 #: src/components/settings/Settings.tsx:80
@@ -3085,9 +3085,9 @@ msgstr ""
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} Награди на блока"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:29
-msgid "{currencyCode} Total Chia Farmed"
-msgstr "{currencyCode} Общо изкопани Chia"
+#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:29
+msgid "{currencyCode} Total replaceme Farmed"
+msgstr "{currencyCode} Общо изкопани replaceme"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 msgid "{currencyCode} User Transaction Fees"

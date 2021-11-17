@@ -8,7 +8,7 @@ import {
   Flex,
   Checkbox,
   TooltipIcon,
-} from '@chia/core';
+} from '@replaceme/core';
 import {
   Grid,
   FormControl,

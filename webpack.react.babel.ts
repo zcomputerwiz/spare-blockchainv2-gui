@@ -80,8 +80,8 @@ export default {
       'node_modules',
     ],
     alias: {
-      "@chia/core": `${__dirname}/src/components/core`,
-      "@chia/icons": `${__dirname}/src/components/icons`,
+      "@replaceme/core": `${__dirname}/src/components/core`,
+      "@replaceme/icons": `${__dirname}/src/components/icons`,
       crypto: 'crypto-browserify',
       stream: 'stream-browserify',
     },

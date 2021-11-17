@@ -7,7 +7,7 @@ import {
   AlertDialog,
   Flex,
   Card,
-} from '@chia/core';
+} from '@replaceme/core';
 import {
   Grid,
   Typography,

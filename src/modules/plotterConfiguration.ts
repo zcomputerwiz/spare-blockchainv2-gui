@@ -4,9 +4,9 @@ import Plotter, { PlotterMap } from '../types/Plotter';
 
 export const defaultPlotter = (): Plotter => {
   return {
-    displayName: "Chia Proof of Space",
-    options: optionsForPlotter(PlotterName.CHIAPOS),
-    defaults: defaultsForPlotter(PlotterName.CHIAPOS),
+    displayName: "replaceme Proof of Space",
+    options: optionsForPlotter(PlotterName.replacemePOS),
+    defaults: defaultsForPlotter(PlotterName.replacemePOS),
     installInfo: { installed: true },
   }
 }
@@ -18,7 +18,7 @@ type PlotterConfigurationState = {
 
 const initialState: PlotterConfigurationState = {
   availablePlotters: {
-    [PlotterName.CHIAPOS]: defaultPlotter(),
+    [PlotterName.replacemePOS]: defaultPlotter(),
   },
   fetchedPlotters: false,
 }
