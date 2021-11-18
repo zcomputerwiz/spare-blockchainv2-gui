@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { Card, CardContent } from '@material-ui/core';
-import { Flex } from '@replaceme/core';
+import { Flex } from '@spare/core';
 
 const StyledContent = styled(CardContent)`
   padding: ${({ theme }) =>

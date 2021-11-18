@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import FarmCard from '../../farm/card/FarmCard';
-import { FormatLargeNumber } from '@replaceme/core';
+import { FormatLargeNumber } from '@spare/core';
 import { RootState } from '../../../modules/rootReducer';
 
 export default function FullNodeCardPeakHeight() {

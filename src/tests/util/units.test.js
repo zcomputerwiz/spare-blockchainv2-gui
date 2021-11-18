@@ -2,13 +2,13 @@ const units = require('../../util/units');
 
 describe('units', () => {
   describe('#getUnit', () => {
-    it('gets unit of replaceme', () => {
-      const result = units.getUnit('replaceme');
+    it('gets unit of spare', () => {
+      const result = units.getUnit('spare');
 
       expect(result).toBe(1);
     });
-    it('gets unit of mojo', () => {
-      const result = units.getUnit('mojo');
+    it('gets unit of graviton', () => {
+      const result = units.getUnit('graviton');
 
       expect(result).toBe(1e-12);
     });
@@ -18,16 +18,16 @@ describe('units', () => {
       expect(result).toBe(1e-9);
     });
     it('supports uppercase characters', () => {
-      const result = units.getUnit('replaceme');
+      const result = units.getUnit('spare');
 
       expect(result).toBe(1);
     });
-    it('gets unit of replaceme using alias', () => {
+    it('gets unit of spare using alias', () => {
       const result = units.getUnit('ch');
 
       expect(result).toBe(1);
     });
-    it('gets unit of mojo using alias', () => {
+    it('gets unit of graviton using alias', () => {
       const result = units.getUnit('mj');
 
       expect(result).toBe(1e-12);
@@ -46,16 +46,16 @@ describe('units', () => {
     });
   });
   describe('#getDisplay', () => {
-    it('gets display of replaceme', () => {
-      const result = units.getDisplay('replaceme');
+    it('gets display of spare', () => {
+      const result = units.getDisplay('spare');
 
       expect(result).toEqual({
         format: '{amount} CH',
         fractionDigits: 12,
       });
     });
-    it('gets display of mojo', () => {
-      const result = units.getDisplay('mojo');
+    it('gets display of graviton', () => {
+      const result = units.getDisplay('graviton');
 
       expect(result).toEqual({
         format: '{amount} MJ',
@@ -87,13 +87,13 @@ describe('units', () => {
       expect(result).toEqual(1);
     });
     it('modifies an existing unit', () => {
-      units.setUnit('replaceme', 9);
+      units.setUnit('spare', 9);
 
-      const result = units.getUnit('replaceme');
+      const result = units.getUnit('spare');
 
       expect(result).toEqual(9);
 
-      units.setUnit('replaceme', 1);
+      units.setUnit('spare', 1);
     });
   });
   describe('#setDisplay', () => {
@@ -111,15 +111,15 @@ describe('units', () => {
       });
     });
     it('updates an existing display', () => {
-      units.setDisplay('replaceme', {
-        format: '{amount} TXCH',
+      units.setDisplay('spare', {
+        format: '{amount} TSPARE',
         fractionDigits: 0,
       });
 
-      const result = units.getDisplay('replaceme');
+      const result = units.getDisplay('spare');
 
       expect(result).toEqual({
-        format: '{amount} TXCH',
+        format: '{amount} TSPARE',
         fractionDigits: 0,
       });
     });

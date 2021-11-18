@@ -12,7 +12,7 @@ const convert = (amount, from, to) => {
   return Number.parseFloat(amountInFromUnit.div(units.getUnit(to)));
 };
 
-class replaceme {
+class spare {
   constructor(value, unit) {
     this._value = value;
     this._unit = unit;
@@ -73,42 +73,42 @@ class replaceme {
   }
 }
 
-export const replaceme_formatter = (value, unit) => new replaceme(value, unit);
+export const spare_formatter = (value, unit) => new spare(value, unit);
 
-replaceme_formatter.convert = convert;
-replaceme_formatter.setDisplay = units.setDisplay;
-replaceme_formatter.setUnit = units.setUnit;
-replaceme_formatter.getUnit = units.getUnit;
-replaceme_formatter.setFiat = (currency, rate, display = null) => {
+spare_formatter.convert = convert;
+spare_formatter.setDisplay = units.setDisplay;
+spare_formatter.setUnit = units.setUnit;
+spare_formatter.getUnit = units.getUnit;
+spare_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const mojo_to_replaceme = (mojo) => {
-  return replaceme_formatter(Number.parseInt(mojo), 'mojo').to('replaceme').value();
+export const graviton_to_spare = (graviton) => {
+  return spare_formatter(Number.parseInt(graviton), 'graviton').to('spare').value();
 };
 
-export const replaceme_to_mojo = (replaceme) => {
-  return replaceme_formatter(Number.parseFloat(Number(replaceme)), 'replaceme')
-    .to('mojo')
+export const spare_to_graviton = (spare) => {
+  return spare_formatter(Number.parseFloat(Number(spare)), 'spare')
+    .to('graviton')
     .value();
 };
 
-export const mojo_to_replaceme_string = (mojo) => {
-  return replaceme_formatter(Number(mojo), 'mojo').to('replaceme').toString();
+export const graviton_to_spare_string = (graviton) => {
+  return spare_formatter(Number(graviton), 'graviton').to('spare').toString();
 };
 
-export const mojo_to_colouredcoin = (mojo) => {
-  return replaceme_formatter(Number.parseInt(mojo), 'mojo')
+export const graviton_to_colouredcoin = (graviton) => {
+  return spare_formatter(Number.parseInt(graviton), 'graviton')
     .to('colouredcoin')
     .value();
 };
 
-export const colouredcoin_to_mojo = (colouredcoin) => {
-  return replaceme_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
-    .to('mojo')
+export const colouredcoin_to_graviton = (colouredcoin) => {
+  return spare_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
+    .to('graviton')
     .value();
 };
 
-export const mojo_to_colouredcoin_string = (mojo) => {
-  return replaceme_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
+export const graviton_to_colouredcoin_string = (graviton) => {
+  return spare_formatter(Number(graviton), 'graviton').to('colouredcoin').toString();
 };

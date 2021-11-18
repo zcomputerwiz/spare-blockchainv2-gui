@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import { Typography } from '@material-ui/core';
-import { Link, Table, Card } from '@replaceme/core';
+import { Link, Table, Card } from '@spare/core';
 import type { RootState } from '../../modules/rootReducer';
 import type { Row } from '../core/components/Table/Table';
 
@@ -62,13 +62,13 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore replaceme’s blocks further? Check out{' '}
+          *Want to explore spare’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://www.replacemeexplorer.com/"
+            href="https://www.spareexplorer.com/"
             target="_blank"
           >
-            replaceme Explorer
+            spare Explorer
           </Link>{' '}
           built by an open source developer.
         </Trans>

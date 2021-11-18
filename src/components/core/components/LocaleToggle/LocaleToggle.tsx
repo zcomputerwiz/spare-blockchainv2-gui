@@ -43,7 +43,7 @@ export default function LocaleToggle(props: Props) {
     handleClose();
 
     openExternal(
-      'https://github.com/replaceme-Network/replaceme-blockchain-gui/tree/main/src/locales/README.md',
+      'https://github.com/spare-Network/spare-blockchain-gui/tree/main/src/locales/README.md',
     );
   }
 

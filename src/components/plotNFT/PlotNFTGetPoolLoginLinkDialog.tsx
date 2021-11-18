@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { t, Trans } from '@lingui/macro';
 import { Alert } from '@material-ui/lab';
 import styled from 'styled-components';
-import { CopyToClipboard, Flex, Link, Loading } from '@replaceme/core';
+import { CopyToClipboard, Flex, Link, Loading } from '@spare/core';
 import {
   Button,
   Dialog,
@@ -98,7 +98,7 @@ export default function PlotNFTGetPoolLoginLinkDialog(props: Props) {
                 </Trans>{' '}
                 <Link
                   target="_blank"
-                  href="https://github.com/replaceme-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
+                  href="https://github.com/spare-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
                   noWrap
                 >
                   <Trans>Learn More</Trans>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
 import { Typography, TypographyProps } from '@material-ui/core';
 import { FiberManualRecord as FiberManualRecordIcon } from '@material-ui/icons';
-import { Flex } from '@replaceme/core';
+import { Flex } from '@spare/core';
 
 function getIconSize(size: string): string {
   switch (size) {
