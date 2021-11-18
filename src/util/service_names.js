@@ -4,7 +4,7 @@ export const service_farmer = 'replaceme_farmer';
 export const service_harvester = 'replaceme_harvester';
 export const service_simulator = 'replaceme_full_node_simulator';
 export const service_daemon = 'daemon';
-export const service_plotter = 'replaceme_plotter';
+export const service_plotter = 'chia_plotter';
 
 // Corresponds with outbound_message.py NodeTypes
 export const service_connection_types = {
