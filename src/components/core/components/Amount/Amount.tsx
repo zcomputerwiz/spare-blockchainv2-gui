@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import { useWatch, useFormContext } from 'react-hook-form';
 import TextField, { TextFieldProps } from '../TextField';
-import { replaceme_to_mojo } from '../../../../util/replaceme';
+import { spare_to_graviton } from '../../../../util/spare';
 import useCurrencyCode from '../../../../hooks/useCurrencyCode';
 import FormatLargeNumber from '../FormatLargeNumber';
 import Flex from '../Flex';
@@ -40,7 +40,7 @@ function NumberFormatCustom(props: NumberFormatCustomProps) {
 }
 
 export type AmountProps = TextFieldProps & {
-  children?: (props: { mojo: number; value: string | undefined }) => ReactNode;
+  children?: (props: { graviton: number; value: string | undefined }) => ReactNode;
   name?: string;
 };
 
@@ -54,7 +54,7 @@ export default function Amount(props: AmountProps) {
     name,
   });
 
-  const mojo = replaceme_to_mojo(value);
+  const graviton = spare_to_graviton(value);
 
   return (
     <FormControl variant={variant} fullWidth={fullWidth}>
@@ -75,18 +75,18 @@ export default function Amount(props: AmountProps) {
         <FormHelperText component='div' >
           <Flex alignItems="center" gap={2}>
             <Flex flexGrow={1} gap={1}>
-              {!!mojo && (
+              {!!graviton && (
                 <>
-                  <FormatLargeNumber value={mojo} />
+                  <FormatLargeNumber value={graviton} />
                   <Box>
-                    <Plural value={mojo} one="mojo" other="mojos" />
+                    <Plural value={graviton} one="graviton" other="gravitons" />
                   </Box>
                 </>
               )}
             </Flex>
             {children &&
               children({
-                mojo,
+                graviton,
                 value,
               })}
           </Flex>

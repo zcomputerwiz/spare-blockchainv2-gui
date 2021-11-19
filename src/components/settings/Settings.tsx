@@ -7,7 +7,7 @@ import {
   AlertDialog,
   Flex,
   Card,
-} from '@replaceme/core';
+} from '@spare/core';
 import {
   Grid,
   Typography,

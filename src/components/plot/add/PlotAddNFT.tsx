@@ -1,6 +1,6 @@
 import React, { useState, forwardRef } from 'react';
 import { Trans } from '@lingui/macro';
-import { Button, CardStep, Select, Flex, Loading } from '@replaceme/core';
+import { Button, CardStep, Select, Flex, Loading } from '@spare/core';
 import {
   Box,
   Grid,
@@ -47,7 +47,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
         title={<Trans>Create a Plot NFT</Trans>}
         description={
           <Trans>
-            Join a pool and get consistent XCH farming rewards. The average
+            Join a pool and get consistent SPARE farming rewards. The average
             returns are the same, but it is much less volatile.
           </Trans>
         }
@@ -136,7 +136,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
         <>
           <Typography variant="subtitle1">
             <Trans>
-              Join a pool and get more consistent XCH farming rewards. Create a
+              Join a pool and get more consistent SPARE farming rewards. Create a
               plot NFT and assign your new plots to a group.
             </Trans>
           </Typography>

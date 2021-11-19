@@ -12,11 +12,11 @@ global.key_path = 'config/ssl/daemon/private_daemon.key';
 
 function loadConfig(net) {
   try {
-    // check if replaceme_ROOT is set. it overrides 'net'
+    // check if spare_ROOT is set. it overrides 'net'
     const config_root_dir =
-      'replaceme_ROOT' in process.env
-        ? process.env.replaceme_ROOT
-        : path.join(os.homedir(), '.replaceme', net);
+      'spare_ROOT' in process.env
+        ? process.env.spare_ROOT
+        : path.join(os.homedir(), '.spare', net);
     const config = yaml.load(
       fs.readFileSync(path.join(config_root_dir, 'config/config.yaml'), 'utf8'),
     );

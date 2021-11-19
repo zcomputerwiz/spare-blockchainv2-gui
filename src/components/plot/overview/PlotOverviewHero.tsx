@@ -3,8 +3,8 @@ import { Trans } from '@lingui/macro';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Button, Grid, Typography, Divider } from '@material-ui/core';
-import { CardHero, Flex, Link } from '@replaceme/core';
-import { PlotHero as PlotHeroIcon } from '@replaceme/icons';
+import { CardHero, Flex, Link } from '@spare/core';
+import { PlotHero as PlotHeroIcon } from '@spare/icons';
 import PlotAddDirectoryDialog from '../PlotAddDirectoryDialog';
 import { refreshPlots } from '../../../modules/harvesterMessages';
 import useOpenDialog from '../../../hooks/useOpenDialog';
@@ -34,11 +34,11 @@ export default function PlotOverviewHero() {
           <Typography variant="body1">
             <Trans>
               {
-                'Plots are allocated space on your hard drive used to farm and earn replaceme. '
+                'Plots are allocated space on your hard drive used to farm and earn spare. '
               }
               <Link
                 target="_blank"
-                href="https://github.com/replaceme-Network/replaceme-blockchain/wiki/Network-Architecture"
+                href="https://github.com/spare-Network/spare-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

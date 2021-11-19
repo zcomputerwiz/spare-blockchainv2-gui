@@ -1,5 +1,5 @@
 {
   "dest": "dist/installers/",
-  "icon": "src/assets/img/replaceme.ico",
+  "icon": "src/assets/img/spare.ico",
   "tags": ["Blockchain"]
 }

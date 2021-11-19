@@ -8,7 +8,7 @@ import {
   Flex,
   Checkbox,
   TooltipIcon,
-} from '@replaceme/core';
+} from '@spare/core';
 import {
   Grid,
   FormControl,

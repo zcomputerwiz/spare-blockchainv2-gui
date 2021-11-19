@@ -1,6 +1,6 @@
 enum Unit {
-  replaceme = 'replaceme',
-  MOJO = 'MOJO',
+  spare = 'spare',
+  GRAVITON = 'GRAVITON',
   COLOURED_COIN = 'COLOUREDCOIN',
 }
 
