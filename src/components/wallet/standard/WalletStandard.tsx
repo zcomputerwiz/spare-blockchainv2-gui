@@ -5,7 +5,7 @@ import {
   Amount,
   Fee,
   Form,
-  TextField as spareTextField,
+  TextField as SpareTextField,
   AlertDialog,
   CopyToClipboard,
   Flex,
@@ -487,7 +487,7 @@ function SendCard(props: SendCardProps) {
       <Form methods={methods} onSubmit={handleSubmit}>
         <Grid spacing={2} container>
           <Grid xs={12} item>
-            <spareTextField
+            <SpareTextField
               name="address"
               variant="filled"
               color="secondary"
