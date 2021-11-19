@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../modules/rootReducer';
 import FarmCard from './FarmCard';
-import { graviton_to_spare } from '../../../util/spare';
+import { mojo_to_replaceme } from '../../../util/replaceme';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
 export default function FarmCardBlockRewards() {
@@ -26,7 +26,7 @@ export default function FarmCardBlockRewards() {
       const val =
         BigInt(farmerRewardAmount.toString()) +
         BigInt(poolRewardAmount.toString());
-      return graviton_to_spare(val);
+      return mojo_to_replaceme(val);
     }
   }, [farmerRewardAmount, poolRewardAmount]);
 

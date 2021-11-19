@@ -11,7 +11,7 @@ import {
   Loading,
   FormatLargeNumber,
   Link,
-} from '@spare/core';
+} from '@replaceme/core';
 import {
   Box,
   Card,

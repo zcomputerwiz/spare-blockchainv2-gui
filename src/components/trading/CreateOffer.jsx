@@ -12,10 +12,10 @@ import {
   Button,
   InputLabel,
 } from '@material-ui/core';
-import { AlertDialog, Card, Flex } from '@spare/core';
+import { AlertDialog, Card, Flex } from '@replaceme/core';
 import isElectron from 'is-electron';
 import { newBuy, newSell, addTrade, resetTrades } from '../../modules/trade';
-import { spare_to_graviton, colouredcoin_to_graviton } from '../../util/spare';
+import { replaceme_to_mojo, colouredcoin_to_mojo } from '../../util/replaceme';
 import { openDialog } from '../../modules/dialog';
 import { create_trade_action } from '../../modules/trade_messages';
 import { COLOURED_COIN } from '../../util/wallet_types';
@@ -79,15 +79,15 @@ export default function CreateOffer() {
       );
       return;
     }
-    const graviton =
+    const mojo =
       wallets[wallet_id.value].type === COLOURED_COIN
-        ? colouredcoin_to_graviton(amount_input.value)
-        : spare_to_graviton(amount_input.value);
+        ? colouredcoin_to_mojo(amount_input.value)
+        : replaceme_to_mojo(amount_input.value);
 
     const trade =
       buy_or_sell.value === 1
-        ? newBuy(graviton, wallet_id.value)
-        : newSell(graviton, wallet_id.value);
+        ? newBuy(mojo, wallet_id.value)
+        : newSell(mojo, wallet_id.value);
 
     dispatch(addTrade(trade));
   }

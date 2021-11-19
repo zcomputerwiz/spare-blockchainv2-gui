@@ -8,7 +8,7 @@
       "esnext"
     ],
     "paths": {
-      "@spare/*": ["./components/*"]
+      "@replaceme/*": ["./components/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

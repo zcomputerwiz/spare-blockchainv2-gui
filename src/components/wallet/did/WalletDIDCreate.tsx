@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
-import { Amount, Form, AlertDialog, Back, Card, Flex, ButtonLoading } from '@spare/core';
+import { Amount, Form, AlertDialog, Back, Card, Flex, ButtonLoading } from '@replaceme/core';
 import {
   Typography,
   Button,
@@ -13,7 +13,7 @@ import {
 } from '../../../modules/createWallet';
 import { useDispatch } from 'react-redux';
 import { create_did_action } from '../../../modules/message';
-import { spare_to_graviton } from '../../../util/spare';
+import { replaceme_to_mojo } from '../../../util/replaceme';
 import { openDialog } from '../../../modules/dialog';
 import { useForm, Controller, useFieldArray } from 'react-hook-form';
 import { Help as HelpIcon } from '@material-ui/icons';
@@ -37,7 +37,7 @@ export default function WalletDIDCreate() {
       const didArray = data.backup_dids?.map((item) => item.backupid) ?? [];
       let uniqDidArray = Array.from(new Set(didArray));
       uniqDidArray = uniqDidArray.filter(item => item !== "")
-      const amount_val = spare_to_graviton(data.amount);
+      const amount_val = replaceme_to_mojo(data.amount);
       if (
         amount_val === '' ||
         Number(amount_val) === 0 ||
@@ -116,7 +116,7 @@ export default function WalletDIDCreate() {
                 <Typography variant="subtitle1">
                   Enter amount
                 </Typography>
-                <Tooltip title="The amount of spare you enter must correspond to an even amount of gravitons. One additional graviton will be added to the total amount for security purposes.">
+                <Tooltip title="The amount of replaceme you enter must correspond to an even amount of mojos. One additional mojo will be added to the total amount for security purposes.">
                   <HelpIcon style={{ color: '#c8c8c8', fontSize: 12 }} />
                 </Tooltip>
               </Flex>
@@ -131,9 +131,9 @@ export default function WalletDIDCreate() {
                     {() => (
                       <Flex display="flex" gap={1} alignItems="center">
                         <div>
-                          + 1 graviton
+                          + 1 mojo
                         </div>
-                        <Tooltip title="This additional graviton will be added to the total amount for security purposes.">
+                        <Tooltip title="This additional mojo will be added to the total amount for security purposes.">
                           <HelpIcon style={{ color: '#c8c8c8', fontSize: 12 }} />
                         </Tooltip>
                       </Flex>

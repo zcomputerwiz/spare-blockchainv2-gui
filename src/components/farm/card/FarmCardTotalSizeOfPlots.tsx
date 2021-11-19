@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { FormatBytes } from '@spare/core';
+import { FormatBytes } from '@replaceme/core';
 import usePlots from '../../../hooks/usePlots';
 import FarmCard from './FarmCard';
 

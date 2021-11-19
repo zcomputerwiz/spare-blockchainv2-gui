@@ -12,7 +12,7 @@ import {
   RadioGroup,
   Fee,
   TextField,
-} from '@spare/core';
+} from '@replaceme/core';
 import {
   Grid,
   FormControl,
@@ -102,7 +102,7 @@ export default function PlotNFTSelectBase(props: Props) {
                     control={<Radio />}
                     label={
                       <Trans>
-                        Self pool. When you win a block you will earn SPARE
+                        Self pool. When you win a block you will earn XCH
                         rewards.
                       </Trans>
                     }

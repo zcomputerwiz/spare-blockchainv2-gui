@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
 import { useFormContext } from 'react-hook-form';
-import { CardStep, ConfirmDialog, Link, Select, StateColor } from '@spare/core';
+import { CardStep, ConfirmDialog, Link, Select, StateColor } from '@replaceme/core';
 import {
   Grid,
   FormControl,
@@ -80,7 +80,7 @@ export default function PlotAddChooseSize(props: Props) {
           }
           <Link
             target="_blank"
-            href="https://github.com/spare-Network/spare-blockchain/wiki/k-sizes"
+            href="https://github.com/replaceme-Network/replaceme-blockchain/wiki/k-sizes"
           >
             Learn more
           </Link>

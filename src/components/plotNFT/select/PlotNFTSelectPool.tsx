@@ -6,12 +6,12 @@ import React, {
 } from 'react';
 import { t, Trans } from '@lingui/macro';
 import { useForm } from 'react-hook-form';
-import { ButtonLoading, Loading, Flex, Form, FormBackButton } from '@spare/core';
+import { ButtonLoading, Loading, Flex, Form, FormBackButton } from '@replaceme/core';
 import PlotNFTSelectBase from './PlotNFTSelectBase';
 import normalizeUrl from '../../../util/normalizeUrl';
 import getPoolInfo from '../../../util/getPoolInfo';
 import InitialTargetState from '../../../types/InitialTargetState';
-import { spare_to_graviton } from '../../../util/spare';
+import { replaceme_to_mojo } from '../../../util/replaceme';
 import useStandardWallet from '../../../hooks/useStandardWallet';
 import PlotNFTSelectFaucet from './PlotNFTSelectFaucet';
 
@@ -43,10 +43,10 @@ async function prepareSubmitData(data: FormData): SubmitData {
     initialTargetState.relative_lock_height = relative_lock_height;
   }
 
-  const feeGravitons = spare_to_graviton(fee || '0');
+  const feeMojos = replaceme_to_mojo(fee || '0');
 
   return {
-    fee: feeGravitons,
+    fee: feeMojos,
     initialTargetState,
   };
 }

@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
 import { Box, Tooltip, Typography } from '@material-ui/core';
-import { Card, CopyToClipboard, Flex, Table } from '@spare/core';
+import { Card, CopyToClipboard, Flex, Table } from '@replaceme/core';
 import type { Row } from '../core/components/Table/Table';
 import {
-  graviton_to_spare_string,
-  graviton_to_colouredcoin_string,
-} from '../../util/spare';
+  mojo_to_replaceme_string,
+  mojo_to_colouredcoin_string,
+} from '../../util/replaceme';
 import { unix_to_short_date } from '../../util/utils';
 import TransactionType from '../../constants/TransactionType';
 import WalletType from '../../constants/WalletType';
@@ -57,12 +57,12 @@ const getCols = (type: WalletType) => [
   {
     field: (row: Row) =>
       type === WalletType.COLOURED_COIN
-        ? graviton_to_colouredcoin_string(row.amount)
-        : graviton_to_spare_string(row.amount),
+        ? mojo_to_colouredcoin_string(row.amount)
+        : mojo_to_replaceme_string(row.amount),
     title: <Trans>Amount</Trans>,
   },
   {
-    field: (row: Row) => graviton_to_spare_string(row.fee_amount),
+    field: (row: Row) => mojo_to_replaceme_string(row.fee_amount),
     title: <Trans>Fee</Trans>,
   },
 ];

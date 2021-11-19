@@ -9,7 +9,7 @@ import {
   LinearProgress,
   Typography,
 } from '@material-ui/core';
-import { Flex, Log } from '@spare/core';
+import { Flex, Log } from '@replaceme/core';
 import styled from 'styled-components';
 import type { RootState } from '../../../modules/rootReducer';
 import useThrottleSelector from '../../../hooks/useThrottleSelector';

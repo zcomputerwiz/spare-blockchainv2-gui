@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import FarmCard from '../../farm/card/FarmCard';
 import useWallet from '../../../hooks/useWallet';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
-import { graviton_to_spare_string } from '../../../util/spare';
+import { mojo_to_replaceme_string } from '../../../util/replaceme';
 
 type Props = {
   wallet_id: number;
@@ -30,7 +30,7 @@ export default function WalletCardPendingChange(props: Props) {
       }
       value={
         <>
-          {graviton_to_spare_string(value)} {currencyCode}
+          {mojo_to_replaceme_string(value)} {currencyCode}
         </>
       }
     />

@@ -9,8 +9,8 @@ import {
   Loading,
   StateColor,
   Table,
-} from '@spare/core';
-import { Status } from '@spare/icons';
+} from '@replaceme/core';
+import { Status } from '@replaceme/icons';
 import { useRouteMatch, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Box, Tooltip, Typography } from '@material-ui/core';

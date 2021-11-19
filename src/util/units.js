@@ -1,21 +1,21 @@
 const units = {
-  spare: 1,
-  graviton: 1 / 1e12,
+  replaceme: 1,
+  mojo: 1 / 1e12,
   colouredcoin: 1 / 1e9,
 };
 
 const aliases = {
-  spare: ['ch', 'spare', 'spare'],
-  graviton: ['mj', 'graviton'],
+  replaceme: ['ch', 'replaceme', 'replaceme'],
+  mojo: ['mj', 'mojo'],
   colouredcoin: ['cc', 'colouredcoin'],
 };
 
 const display = {
-  spare: {
+  replaceme: {
     format: '{amount} CH',
     fractionDigits: 12,
   },
-  graviton: {
+  mojo: {
     format: '{amount} MJ',
     fractionDigits: 0,
   },

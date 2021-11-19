@@ -11,8 +11,8 @@ import {
   Plot as PlotIcon,
   Pool as PoolIcon,
   Settings as SettingsIcon,
-} from '@spare/icons';
-import { Flex, SideBarItem } from '@spare/core';
+} from '@replaceme/icons';
+import { Flex, SideBarItem } from '@replaceme/core';
 import { logOut } from '../../modules/message';
 import { RootState } from '../../modules/rootReducer';
 

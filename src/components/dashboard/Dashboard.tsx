@@ -8,7 +8,7 @@ import {
   Flex,
   Logo,
   ToolbarSpacing,
-} from '@spare/core';
+} from '@replaceme/core';
 import { defaultLocale, locales } from '../../config/locales';
 import Wallets from '../wallet/Wallets';
 import FullNode from '../fullNode/FullNode';

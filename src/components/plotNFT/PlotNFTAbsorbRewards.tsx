@@ -12,7 +12,7 @@ import {
   Form,
   FormBackButton,
   State,
-} from '@spare/core';
+} from '@replaceme/core';
 import { useForm } from 'react-hook-form';
 import { ChevronRight as ChevronRightIcon } from '@material-ui/icons';
 import { Grid, Typography } from '@material-ui/core';
@@ -21,7 +21,7 @@ import usePlotNFTs from '../../hooks/usePlotNFTs';
 import { pwAbsorbRewards } from '../../modules/plotNFT';
 import { SubmitData } from './select/PlotNFTSelectPool';
 import PlotNFTName from './PlotNFTName';
-import { graviton_to_spare, spare_to_graviton } from '../../util/spare';
+import { mojo_to_replaceme, replaceme_to_mojo } from '../../util/replaceme';
 import useStandardWallet from '../../hooks/useStandardWallet';
 
 type FormData = {
@@ -64,13 +64,13 @@ export default function PlotNFTAbsorbRewards(props: Props) {
 
       const { fee } = data;
 
-      const feeGravitons = spare_to_graviton(fee);
+      const feeMojos = replaceme_to_mojo(fee);
 
       if (walletId === undefined || !address) {
         return;
       }
 
-      await dispatch(pwAbsorbRewards(walletId, feeGravitons));
+      await dispatch(pwAbsorbRewards(walletId, feeMojos));
 
       if (history.length) {
         history.goBack();
@@ -137,7 +137,7 @@ export default function PlotNFTAbsorbRewards(props: Props) {
               <Trans>
                 You will recieve{' '}
                 <UnitFormat
-                  value={graviton_to_spare(BigInt(balance))}
+                  value={mojo_to_replaceme(BigInt(balance))}
                   display="inline"
                   state={State.SUCCESS}
                 />{' '}

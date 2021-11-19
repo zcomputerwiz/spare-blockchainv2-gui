@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { AlertDialog } from '@spare/core';
+import { AlertDialog } from '@replaceme/core';
 import {
   Typography,
   Button,
@@ -20,7 +20,7 @@ import {
 } from '../../../modules/createWallet';
 import { useStyles } from './WalletCreate';
 import { create_cc_action } from '../../../modules/message';
-import { spare_to_graviton } from '../../../util/spare';
+import { replaceme_to_mojo } from '../../../util/replaceme';
 import { openDialog } from '../../../modules/dialog';
 
 export const customStyles = makeStyles((theme) => ({
@@ -83,8 +83,8 @@ export const CreateNewCCWallet = () => {
       return;
     }
     dispatch(createState(true, true));
-    const amount = spare_to_graviton(amount_input.value);
-    const fee = spare_to_graviton(fee_input.value);
+    const amount = replaceme_to_mojo(amount_input.value);
+    const fee = replaceme_to_mojo(fee_input.value);
     dispatch(create_cc_action(amount, fee));
   }
 
