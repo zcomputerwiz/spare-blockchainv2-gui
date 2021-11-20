@@ -2614,7 +2614,7 @@ msgstr "수신"
 msgid "Total Balance"
 msgstr "총 잔고"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:15
 #~ msgid "Total spare Farmed"
 #~ msgstr ""
 
@@ -3083,7 +3083,7 @@ msgstr ""
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} 블록 보상"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:29
 msgid "{currencyCode} Total spare Farmed"
 msgstr "{currencyCode} 채굴된 총 spare"
 

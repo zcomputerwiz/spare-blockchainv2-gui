@@ -2614,7 +2614,7 @@ msgstr "Till"
 msgid "Total Balance"
 msgstr "Totalt saldo"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:15
 #~ msgid "Total spare Farmed"
 #~ msgstr ""
 
@@ -3085,7 +3085,7 @@ msgstr "{0} poäng {1} - {2} timmar sedan"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} blockbelöningar"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:29
 msgid "{currencyCode} Total spare Farmed"
 msgstr "{currencyCode} Totalt antal spare som odlats"
 

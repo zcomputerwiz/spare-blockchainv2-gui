@@ -2622,7 +2622,7 @@ msgstr "Nach"
 msgid "Total Balance"
 msgstr "Gesamtes Guthaben"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:15
 #~ msgid "Total spare Farmed"
 #~ msgstr ""
 
@@ -3091,7 +3091,7 @@ msgstr "{0} Punkte {1} - vor {2} Stunden"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} Block Belohnungen"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:29
 msgid "{currencyCode} Total spare Farmed"
 msgstr "{currencyCode} Gesamtes spare gefarmt"
 

@@ -2338,7 +2338,7 @@ msgstr "Kam"
 msgid "Total Balance"
 msgstr "Bendras balansas"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:15
 #~ msgid "Total spare Farmed"
 #~ msgstr ""
 
@@ -2743,7 +2743,7 @@ msgstr ""
 msgid "{currencyCode} Block Rewards"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:29
 msgid "{currencyCode} Total spare Farmed"
 msgstr ""
 

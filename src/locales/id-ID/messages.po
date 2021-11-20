@@ -2616,7 +2616,7 @@ msgstr "Ke"
 msgid "Total Balance"
 msgstr "Jumlah Saldo"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:15
 #~ msgid "Total spare Farmed"
 #~ msgstr ""
 
@@ -3085,7 +3085,7 @@ msgstr "{0} poin {1} - {2} jam yang lalu"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} Blok Ganjaran"
 
-#: src/components/farm/card/FarmCardTotalspareFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalSpareFarmed.tsx:29
 msgid "{currencyCode} Total spare Farmed"
 msgstr "{currencyCode} Total spare yang di-Farm"
 
