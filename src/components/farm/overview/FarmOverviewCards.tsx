@@ -18,7 +18,7 @@ export default function FarmOverviewCards() {
           <FarmCardStatus />
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
-          <FarmCardTotalreplacemeFarmed />
+          <FarmCardTotalReplacemeFarmed />
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
           <FarmCardBlockRewards />
