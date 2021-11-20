@@ -6,7 +6,7 @@ import FarmCard from './FarmCard';
 import { graviton_to_spare } from '../../../util/spare';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
-export default function FarmCardTotalspareFarmed() {
+export default function FarmCardTotalSpareFarmed() {
   const currencyCode = useCurrencyCode();
 
   const loading = useSelector(
