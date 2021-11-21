@@ -2786,7 +2786,7 @@ msgstr "Кому"
 msgid "Total Balance"
 msgstr "Итоговый баланс"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:15
 #~ msgid "Total replaceme Farmed"
 #~ msgstr ""
 
@@ -3255,7 +3255,7 @@ msgstr "{0} очков {1} - {2} часов назад"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} Награда за блок"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:29
 msgid "{currencyCode} Total replaceme Farmed"
 msgstr "{currencyCode} Всего Чиа выращено"
 

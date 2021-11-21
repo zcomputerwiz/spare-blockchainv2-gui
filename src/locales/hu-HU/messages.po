@@ -2616,7 +2616,7 @@ msgstr "Címzett"
 msgid "Total Balance"
 msgstr "Teljes egyenleg"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:15
 #~ msgid "Total replaceme Farmed"
 #~ msgstr ""
 
@@ -3085,7 +3085,7 @@ msgstr ""
 msgid "{currencyCode} Block Rewards"
 msgstr "Blokk jutalmak {currencyCode}"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:29
 msgid "{currencyCode} Total replaceme Farmed"
 msgstr "Teljes farmolt replaceme mennyiség {currencyCode}"
 

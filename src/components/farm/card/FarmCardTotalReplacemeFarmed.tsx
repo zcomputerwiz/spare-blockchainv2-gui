@@ -6,7 +6,7 @@ import FarmCard from './FarmCard';
 import { mojo_to_replaceme } from '../../../util/replaceme';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
-export default function FarmCardTotalreplacemeFarmed() {
+export default function FarmCardTotalReplacemeFarmed() {
   const currencyCode = useCurrencyCode();
 
   const loading = useSelector(
@@ -17,7 +17,7 @@ export default function FarmCardTotalreplacemeFarmed() {
     (state: RootState) => state.wallet_state.farmed_amount?.farmed_amount,
   );
 
-  const totalreplacemeFarmed = useMemo(() => {
+  const totalReplacemeFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       const val = BigInt(farmedAmount.toString());
       return mojo_to_replaceme(val);
@@ -27,7 +27,7 @@ export default function FarmCardTotalreplacemeFarmed() {
   return (
     <FarmCard
       title={<Trans>{currencyCode} Total replaceme Farmed</Trans>}
-      value={totalreplacemeFarmed}
+      value={totalReplacemeFarmed}
       loading={loading}
     />
   );

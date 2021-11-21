@@ -45,7 +45,7 @@ const getExecutablePath = (dist_file) => {
   return path.join(__dirname, PY_MAC_DIST_FOLDER, dist_file);
 };
 
-const getreplacemeVersion = () => {
+const getReplacemeVersion = () => {
   let version = null;
   const exePath = getExecutablePath('replaceme');
   // first see if we can get a replaceme exe in a standard location relative to where we are
@@ -71,7 +71,7 @@ const getreplacemeVersion = () => {
   return version;
 };
 
-const startreplacemeDaemon = () => {
+const startReplacemeDaemon = () => {
   let script = getScriptPath(PY_DIST_FILE);
   let processOptions = {};
   //processOptions.detached = true;
@@ -138,7 +138,7 @@ const startreplacemeDaemon = () => {
 };
 
 module.exports = {
-  startreplacemeDaemon,
-  getreplacemeVersion,
+  startReplacemeDaemon,
+  getReplacemeVersion,
   guessPackaged,
 };

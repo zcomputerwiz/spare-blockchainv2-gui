@@ -2339,7 +2339,7 @@ msgstr "עבור"
 msgid "Total Balance"
 msgstr "יתרה כוללת"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:15
 #~ msgid "Total replaceme Farmed"
 #~ msgstr ""
 
@@ -2744,7 +2744,7 @@ msgstr "{0} נקודות {1} - {2} שעות שחלפו"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} תגלומי בלוק"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:29
 msgid "{currencyCode} Total replaceme Farmed"
 msgstr "{currencyCode} סכום צ'יה כולל שנקצר"
 

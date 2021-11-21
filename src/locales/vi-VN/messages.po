@@ -2338,7 +2338,7 @@ msgstr "Đến"
 msgid "Total Balance"
 msgstr "Tổng số dư"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:15
 #~ msgid "Total replaceme Farmed"
 #~ msgstr ""
 
@@ -2743,7 +2743,7 @@ msgstr ""
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} phần thưởng khối"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:29
 msgid "{currencyCode} Total replaceme Farmed"
 msgstr "{currencyCode} Tổng số replaceme thu được"
 

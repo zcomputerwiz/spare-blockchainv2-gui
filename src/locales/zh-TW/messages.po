@@ -2614,7 +2614,7 @@ msgstr "到"
 msgid "Total Balance"
 msgstr "總餘額"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:15
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:15
 #~ msgid "Total replaceme Farmed"
 #~ msgstr ""
 
@@ -3083,7 +3083,7 @@ msgstr "{0} 積分 {1} - {2} 小時前"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} 區塊獎勵"
 
-#: src/components/farm/card/FarmCardTotalreplacemeFarmed.tsx:29
+#: src/components/farm/card/FarmCardTotalReplacemeFarmed.tsx:29
 msgid "{currencyCode} Total replaceme Farmed"
 msgstr "{currencyCode} 已收耕 replaceme"
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Box, BoxProps } from '@material-ui/core';
 import { replaceme } from '@replaceme/icons';
 
-const Styledreplaceme = styled(replaceme)`
+const StyledReplaceme = styled(replaceme)`
   max-width: 100%;
   width: auto;
   height: auto;
@@ -12,7 +12,7 @@ const Styledreplaceme = styled(replaceme)`
 export default function Logo(props: BoxProps) {
   return (
     <Box {...props}>
-      <Styledreplaceme />
+      <StyledReplaceme />
     </Box>
   );
 }
