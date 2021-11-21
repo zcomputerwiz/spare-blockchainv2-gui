@@ -45,7 +45,7 @@ const getExecutablePath = (dist_file) => {
   return path.join(__dirname, PY_MAC_DIST_FOLDER, dist_file);
 };
 
-const getspareVersion = () => {
+const getSpareVersion = () => {
   let version = null;
   const exePath = getExecutablePath('spare');
   // first see if we can get a spare exe in a standard location relative to where we are
@@ -71,7 +71,7 @@ const getspareVersion = () => {
   return version;
 };
 
-const startspareDaemon = () => {
+const startSpareDaemon = () => {
   let script = getScriptPath(PY_DIST_FILE);
   let processOptions = {};
   //processOptions.detached = true;
@@ -138,7 +138,7 @@ const startspareDaemon = () => {
 };
 
 module.exports = {
-  startspareDaemon,
-  getspareVersion,
+  startSpareDaemon,
+  getSpareVersion,
   guessPackaged,
 };

@@ -17,7 +17,7 @@ export default function FarmCardTotalSpareFarmed() {
     (state: RootState) => state.wallet_state.farmed_amount?.farmed_amount,
   );
 
-  const totalspareFarmed = useMemo(() => {
+  const totalSpareFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       const val = BigInt(farmedAmount.toString());
       return graviton_to_spare(val);
@@ -27,7 +27,7 @@ export default function FarmCardTotalSpareFarmed() {
   return (
     <FarmCard
       title={<Trans>{currencyCode} Total spare Farmed</Trans>}
-      value={totalspareFarmed}
+      value={totalSpareFarmed}
       loading={loading}
     />
   );

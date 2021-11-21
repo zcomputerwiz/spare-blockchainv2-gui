@@ -240,9 +240,9 @@ const IncompleteCard = (props) => {
 
   function submit() {
     const ip_val = ip_input.value;
-    const hespareeck = /[\da-f]+$/gi;
+    const hexcheck = /[\da-f]+$/gi;
 
-    if (!hespareeck.test(ip_val) || ip_val.value === '') {
+    if (!hexcheck.test(ip_val) || ip_val.value === '') {
       dispatch(openDialog('Please enter a valid info packet'));
       return;
     }

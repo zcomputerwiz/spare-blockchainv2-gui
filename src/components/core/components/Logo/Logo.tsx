@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Box, BoxProps } from '@material-ui/core';
 import { spare } from '@spare/icons';
 
-const Styledspare = styled(spare)`
+const StyledSpare = styled(spare)`
   max-width: 100%;
   width: auto;
   height: auto;
@@ -12,7 +12,7 @@ const Styledspare = styled(spare)`
 export default function Logo(props: BoxProps) {
   return (
     <Box {...props}>
-      <Styledspare />
+      <StyledSpare />
     </Box>
   );
 }
