@@ -26,7 +26,7 @@ export default function FarmCardTotalSpareFarmed() {
 
   return (
     <FarmCard
-      title={<Trans>{currencyCode} Total spare Farmed</Trans>}
+      title={<Trans>{currencyCode} Total Spare Farmed</Trans>}
       value={totalSpareFarmed}
       loading={loading}
     />
