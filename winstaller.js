@@ -18,7 +18,7 @@ function getInstallerConfig () {
     authors: 'Spare Network',
     version: process.env.SPARE_INSTALLER_VERSION,
     noMsi: true,
-    iconUrl: 'https://raw.githubusercontent.com/spare-Network/spare-blockchain/master/electron-react/src/assets/img/spare.ico',
+    iconUrl: 'https://raw.githubusercontent.com/Spare-Network/spare-blockchain/master/electron-react/src/assets/img/spare.ico',
     outputDirectory: path.join(outPath, 'windows-installer'),
     certificateFile: 'win_code_sign_cert.p12',
     certificatePassword: process.env.WIN_CODE_SIGN_PASS,

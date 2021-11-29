@@ -38,7 +38,7 @@ export default function PlotOverviewHero() {
               }
               <Link
                 target="_blank"
-                href="https://github.com/spare-Network/spare-blockchain/wiki/Network-Architecture"
+                href="https://github.com/Spare-Network/spare-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

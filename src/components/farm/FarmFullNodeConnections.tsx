@@ -98,7 +98,7 @@ export default function FarmFullNodeConnections() {
           {'The full node that your farmer is connected to is below. '}
           <Link
             target="_blank"
-            href="https://github.com/spare-Network/spare-blockchain/wiki/Network-Architecture"
+            href="https://github.com/Spare-Network/spare-blockchain/wiki/Network-Architecture"
           >
             Learn more
           </Link>

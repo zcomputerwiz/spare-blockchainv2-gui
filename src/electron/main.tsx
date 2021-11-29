@@ -367,7 +367,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Spare Blockchain Wiki' }),
             click: () => {
               openExternal(
-                'https://github.com/spare-Network/spare-blockchain/wiki',
+                'https://github.com/Spare-Network/spare-blockchain/wiki',
               );
             },
           },
@@ -375,7 +375,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
             click: () => {
               openExternal(
-                'https://github.com/spare-Network/spare-blockchain/wiki/FAQ',
+                'https://github.com/Spare-Network/spare-blockchain/wiki/FAQ',
               );
             },
           },
@@ -383,7 +383,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Release Notes' }),
             click: () => {
               openExternal(
-                'https://github.com/spare-Network/spare-blockchain/releases',
+                'https://github.com/Spare-Network/spare-blockchain/releases',
               );
             },
           },
@@ -402,7 +402,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
             click: () => {
               openExternal(
-                'https://github.com/spare-Network/spare-blockchain/issues',
+                'https://github.com/Spare-Network/spare-blockchain/issues',
               );
             },
           },

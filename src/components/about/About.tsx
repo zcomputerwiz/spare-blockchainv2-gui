@@ -144,7 +144,7 @@ export default function About(props: Props) {
         </VersionsTable>
 
         <BugReport
-          href="https://github.com/spare-Network/spare-blockchain/issues"
+          href="https://github.com/Spare-Network/spare-blockchain/issues"
           target="_blank"
         >
           Report an issue
