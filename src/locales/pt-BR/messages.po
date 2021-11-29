@@ -60,8 +60,8 @@ msgstr ""
 
 #: src/electron/main.tsx:431
 #: src/electron/main.tsx:518
-msgid "About spare Blockchain"
-msgstr "Sobre spare Blockchain"
+msgid "About Spare Blockchain"
+msgstr "Sobre Spare Blockchain"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -251,7 +251,7 @@ msgstr "Bloco VDF Iterações"
 
 #: src/components/block/Block.jsx:337
 msgid "Block at height {0} in the spare blockchain"
-msgstr "Bloco na altura {0} na spare Blockchain"
+msgstr "Bloco na altura {0} na Spare Blockchain"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -359,8 +359,8 @@ msgid "spare"
 msgstr "spare"
 
 #: src/electron/main.tsx:367
-msgid "spare Blockchain Wiki"
-msgstr "Wiki da spare Blockchain"
+msgid "Spare Blockchain Wiki"
+msgstr "Wiki da Spare Blockchain"
 
 #: src/components/wallet/standard/WalletStandard.tsx:642
 msgid "spare Wallet"

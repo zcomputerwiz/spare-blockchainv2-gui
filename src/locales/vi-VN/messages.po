@@ -24,7 +24,7 @@ msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
 msgid "*Want to explore spare’s blocks further? Check out <0>spare Explorer</0> built by an open source developer."
-msgstr "* Bạn muốn khám phá thêm về spare Blockchain? Xem <0> spare Explorer </0> được xây dựng bởi các nhà phát triển nguồn mở."
+msgstr "* Bạn muốn khám phá thêm về Spare Blockchain? Xem <0> spare Explorer </0> được xây dựng bởi các nhà phát triển nguồn mở."
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
@@ -48,8 +48,8 @@ msgstr "Harvester là một dịch vụ chạy trên một máy chứa các tệ
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About spare Blockchain"
-msgstr "Về spare Blockchain"
+msgid "About Spare Blockchain"
+msgstr "Về Spare Blockchain"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -329,8 +329,8 @@ msgid "spare"
 msgstr "spare"
 
 #: src/electron/main.tsx:358
-msgid "spare Blockchain Wiki"
-msgstr "spare Blockchain Wiki"
+msgid "Spare Blockchain Wiki"
+msgstr "Spare Blockchain Wiki"
 
 #: src/components/wallet/standard/WalletStandard.tsx:649
 msgid "spare Wallet"

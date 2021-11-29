@@ -4,7 +4,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import LoadablePlugin from '@loadable/webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import LodashModuleSparentPlugin from 'lodash-webpack-plugin';
+import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
 
 const PORT = 3000;
 const CONTEXT = __dirname;
@@ -117,7 +117,7 @@ export default {
   },
   plugins: [
     new LoadablePlugin(),
-    new LodashModuleSparentPlugin({
+    new LodashModuleReplacementPlugin({
       paths: true,
       flattening: true,
       shorthands: true,

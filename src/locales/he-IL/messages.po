@@ -48,8 +48,8 @@ msgstr "חלקה (Harvester) הוא שירות המופעל במחשב בו מא
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About spare Blockchain"
-msgstr "אודות spare Blockchain"
+msgid "About Spare Blockchain"
+msgstr "אודות Spare Blockchain"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -329,7 +329,7 @@ msgid "spare"
 msgstr "צ'יה"
 
 #: src/electron/main.tsx:358
-msgid "spare Blockchain Wiki"
+msgid "Spare Blockchain Wiki"
 msgstr "ארנק צ'יה"
 
 #: src/components/wallet/standard/WalletStandard.tsx:649

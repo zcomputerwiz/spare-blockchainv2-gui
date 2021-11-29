@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/electron/main.tsx:431
 #: src/electron/main.tsx:518
-msgid "About spare Blockchain"
+msgid "About Spare Blockchain"
 msgstr "À propos de la blockchain spare"
 
 #: src/components/trading/ViewOffer.jsx:74
@@ -359,8 +359,8 @@ msgid "spare"
 msgstr "spare"
 
 #: src/electron/main.tsx:367
-msgid "spare Blockchain Wiki"
-msgstr "Wiki de la spare Blockchain"
+msgid "Spare Blockchain Wiki"
+msgstr "Wiki de la Spare Blockchain"
 
 #: src/components/wallet/standard/WalletStandard.tsx:642
 msgid "spare Wallet"

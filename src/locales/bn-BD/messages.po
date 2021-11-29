@@ -48,7 +48,7 @@ msgstr "হারভেস্টার এমন একটি পরিষেব
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About spare Blockchain"
+msgid "About Spare Blockchain"
 msgstr "চিয়া ব্লকচেইন সম্পর্কে জানুন"
 
 #: src/components/trading/ViewOffer.jsx:74
@@ -329,7 +329,7 @@ msgid "spare"
 msgstr "চিয়া"
 
 #: src/electron/main.tsx:358
-msgid "spare Blockchain Wiki"
+msgid "Spare Blockchain Wiki"
 msgstr "চিয়া ব্লকচেইন উইকি"
 
 #: src/components/wallet/standard/WalletStandard.tsx:649

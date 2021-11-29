@@ -15,7 +15,7 @@ function getInstallerConfig () {
 
   return Promise.resolve({
     appDirectory: path.join(rootPath, 'spare-win32-x64'),
-    authors: 'spare Network',
+    authors: 'Spare Network',
     version: process.env.spare_INSTALLER_VERSION,
     noMsi: true,
     iconUrl: 'https://raw.githubusercontent.com/spare-Network/spare-blockchain/master/electron-react/src/assets/img/spare.ico',

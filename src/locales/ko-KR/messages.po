@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/electron/main.tsx:431
 #: src/electron/main.tsx:518
-msgid "About spare Blockchain"
+msgid "About Spare Blockchain"
 msgstr "치아 블록체인에 대하여"
 
 #: src/components/trading/ViewOffer.jsx:74
@@ -359,7 +359,7 @@ msgid "spare"
 msgstr "치아"
 
 #: src/electron/main.tsx:367
-msgid "spare Blockchain Wiki"
+msgid "Spare Blockchain Wiki"
 msgstr "치아 블록체인 위키"
 
 #: src/components/wallet/standard/WalletStandard.tsx:642

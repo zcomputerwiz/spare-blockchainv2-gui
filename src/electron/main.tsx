@@ -364,7 +364,7 @@ if (!handleSquirrelEvent()) {
         role: 'help',
         submenu: [
           {
-            label: i18n._(/* i18n */ { id: 'spare Blockchain Wiki' }),
+            label: i18n._(/* i18n */ { id: 'Spare Blockchain Wiki' }),
             click: () => {
               openExternal(
                 'https://github.com/spare-Network/spare-blockchain/wiki',
@@ -423,12 +423,12 @@ if (!handleSquirrelEvent()) {
     ];
 
     if (process.platform === 'darwin') {
-      // spare Blockchain menu (Mac)
+      // Spare Blockchain menu (Mac)
       template.unshift({
         label: i18n._(/* i18n */ { id: 'spare' }),
         submenu: [
           {
-            label: i18n._(/* i18n */ { id: 'About spare Blockchain' }),
+            label: i18n._(/* i18n */ { id: 'About Spare Blockchain' }),
             click: () => {
               openAbout();
             },
@@ -515,7 +515,7 @@ if (!handleSquirrelEvent()) {
           type: 'separator',
         },
         {
-          label: i18n._(/* i18n */ { id: 'About spare Blockchain' }),
+          label: i18n._(/* i18n */ { id: 'About Spare Blockchain' }),
           click() {
             openAbout();
           },
